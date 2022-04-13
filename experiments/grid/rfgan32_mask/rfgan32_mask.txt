@@ -1,0 +1,995 @@
+21-10-28 14:47:56, INFO: exp_folder: experiments/rfgan32_mask
+21-10-28 14:47:56, INFO: images_folder: experiments/rfgan32_mask/images
+21-10-28 14:47:56, INFO: models_folder: experiments/rfgan32_mask/models
+21-10-28 14:48:35, INFO: generator: G(
+  (model): Sequential(
+    (0): Linear(
+      (linear): Linear(in_features=2, out_features=32, bias=True)
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): Linear(in_features=32, out_features=32, bias=True)
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Linear(
+      (linear): Linear(in_features=32, out_features=32, bias=True)
+    )
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Linear(
+      (linear): Linear(in_features=32, out_features=32, bias=True)
+    )
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Linear(
+      (linear): Linear(in_features=32, out_features=2, bias=True)
+    )
+  )
+)
+21-10-28 14:48:35, INFO: discriminator: D(
+  (shared_layers): Sequential(
+    (0): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=2, out_features=32, bias=True)
+      )
+    )
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Linear(
+      (linear): SpectralNorm(
+        (module): Linear(in_features=32, out_features=32, bias=True)
+      )
+    )
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+  )
+  (head_0): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=32, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_1): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=32, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_2): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=32, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_3): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=32, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+  (head_4): Sequential(
+    (0): SpectralNorm(
+      (module): MaskedLinear(in_features=32, out_features=1, bias=True)
+    )
+    (1): Dropout(p=0.5, inplace=False)
+    (2): Sigmoid()
+  )
+)
+21-10-28 14:49:02, INFO: [epoch 0 it 0] dloss = 1.3971397876739502, gloss = -0.7180991768836975, prop_real = 1.0, modes = 1, kl = 3.2188758248682006
+21-10-28 14:50:58, INFO: [epoch 1 it 1000] dloss = 1.272005558013916, gloss = -0.6353622674942017, prop_real = 0.0213, modes = 15, kl = 0.7722581512316805
+21-10-28 14:52:54, INFO: [epoch 2 it 2000] dloss = 1.3746657371520996, gloss = -0.6889654994010925, prop_real = 0.01892, modes = 25, kl = 0.06264394583536968
+21-10-28 14:54:49, INFO: [epoch 3 it 3000] dloss = 1.3680949211120605, gloss = -0.6850494742393494, prop_real = 0.02128, modes = 25, kl = 0.06701253484979729
+21-10-28 14:56:46, INFO: [epoch 4 it 4000] dloss = 1.3711702823638916, gloss = -0.6841391324996948, prop_real = 0.01966, modes = 25, kl = 0.048335795912764906
+21-10-28 14:58:42, INFO: [epoch 5 it 5000] dloss = 1.3785979747772217, gloss = -0.6912662982940674, prop_real = 0.02036, modes = 25, kl = 0.06127207707866093
+21-10-28 15:00:40, INFO: [epoch 6 it 6000] dloss = 1.3781989812850952, gloss = -0.6878234148025513, prop_real = 0.0157, modes = 25, kl = 0.04813638577175411
+21-10-28 15:02:36, INFO: [epoch 7 it 7000] dloss = 1.3773629665374756, gloss = -0.6934025287628174, prop_real = 0.01894, modes = 25, kl = 0.06951768515070626
+21-10-28 15:04:35, INFO: [epoch 8 it 8000] dloss = 1.3739396333694458, gloss = -0.6890945434570312, prop_real = 0.01668, modes = 25, kl = 0.04571255451521273
+21-10-28 15:06:33, INFO: [epoch 9 it 9000] dloss = 1.3756449222564697, gloss = -0.6907507181167603, prop_real = 0.0302, modes = 25, kl = 0.06356674295697706
+21-10-28 15:08:30, INFO: [epoch 10 it 10000] dloss = 1.385938048362732, gloss = -0.6899543404579163, prop_real = 0.0332, modes = 24, kl = 0.03789094708242754
+21-10-28 15:10:26, INFO: [epoch 11 it 11000] dloss = 1.374450445175171, gloss = -0.6858529448509216, prop_real = 0.0305, modes = 24, kl = 0.023205126731317638
+21-10-28 15:12:24, INFO: [epoch 12 it 12000] dloss = 1.3751027584075928, gloss = -0.6909218430519104, prop_real = 0.03, modes = 24, kl = 0.013551438409163844
+21-10-28 15:14:21, INFO: [epoch 13 it 13000] dloss = 1.37565279006958, gloss = -0.6917210221290588, prop_real = 0.05246, modes = 25, kl = 0.018989405151671253
+21-10-28 15:16:18, INFO: [epoch 14 it 14000] dloss = 1.374028205871582, gloss = -0.6904861330986023, prop_real = 0.04812, modes = 25, kl = 0.012998099484671182
+21-10-28 15:18:12, INFO: [epoch 15 it 15000] dloss = 1.3738961219787598, gloss = -0.6815232634544373, prop_real = 0.06096, modes = 25, kl = 0.03712913319747924
+21-10-28 15:20:07, INFO: [epoch 16 it 16000] dloss = 1.3742995262145996, gloss = -0.6836360692977905, prop_real = 0.04384, modes = 22, kl = 0.028484926061403237
+21-10-28 15:22:03, INFO: [epoch 17 it 17000] dloss = 1.3815066814422607, gloss = -0.6966209411621094, prop_real = 0.02844, modes = 25, kl = 0.026418413151943803
+21-10-28 15:23:57, INFO: [epoch 18 it 18000] dloss = 1.3753764629364014, gloss = -0.6876392960548401, prop_real = 0.07594, modes = 25, kl = 0.03036199908231436
+21-10-28 15:25:51, INFO: [epoch 19 it 19000] dloss = 1.3733490705490112, gloss = -0.6866177320480347, prop_real = 0.07034, modes = 24, kl = 0.03756145317060988
+21-10-28 15:27:47, INFO: [epoch 20 it 20000] dloss = 1.3726353645324707, gloss = -0.685565710067749, prop_real = 0.05336, modes = 25, kl = 0.047374183366238456
+21-10-28 15:29:43, INFO: [epoch 21 it 21000] dloss = 1.3798394203186035, gloss = -0.6871784925460815, prop_real = 0.06706, modes = 25, kl = 0.04428901519491094
+21-10-28 15:31:37, INFO: [epoch 22 it 22000] dloss = 1.375241994857788, gloss = -0.688766598701477, prop_real = 0.07312, modes = 25, kl = 0.04363803189217141
+21-10-28 15:33:32, INFO: [epoch 23 it 23000] dloss = 1.3643909692764282, gloss = -0.6831471920013428, prop_real = 0.07888, modes = 24, kl = 0.03984227576419804
+21-10-28 15:35:26, INFO: [epoch 24 it 24000] dloss = 1.3763729333877563, gloss = -0.6855427622795105, prop_real = 0.06062, modes = 23, kl = 0.052928884020892394
+21-10-28 15:37:20, INFO: [epoch 25 it 25000] dloss = 1.3775556087493896, gloss = -0.6886728405952454, prop_real = 0.0605, modes = 25, kl = 0.04299568718961042
+21-10-28 15:39:15, INFO: [epoch 26 it 26000] dloss = 1.3828010559082031, gloss = -0.6867488622665405, prop_real = 0.03908, modes = 22, kl = 0.05028319741615332
+21-10-28 15:41:10, INFO: [epoch 27 it 27000] dloss = 1.3744275569915771, gloss = -0.6888468265533447, prop_real = 0.06426, modes = 24, kl = 0.04102610299596226
+21-10-28 15:43:05, INFO: [epoch 28 it 28000] dloss = 1.379347562789917, gloss = -0.6932392120361328, prop_real = 0.06996, modes = 23, kl = 0.046656346838049645
+21-10-28 15:45:00, INFO: [epoch 29 it 29000] dloss = 1.3758879899978638, gloss = -0.6866486072540283, prop_real = 0.08638, modes = 25, kl = 0.04253496369796674
+21-10-28 15:46:54, INFO: [epoch 30 it 30000] dloss = 1.3735072612762451, gloss = -0.6809425354003906, prop_real = 0.0829, modes = 25, kl = 0.05000103290016552
+21-10-28 15:48:46, INFO: [epoch 31 it 31000] dloss = 1.3719239234924316, gloss = -0.6849879026412964, prop_real = 0.08152, modes = 25, kl = 0.04815081397920276
+21-10-28 15:50:39, INFO: [epoch 32 it 32000] dloss = 1.3689287900924683, gloss = -0.6763757467269897, prop_real = 0.06948, modes = 25, kl = 0.05244191611166387
+21-10-28 15:52:33, INFO: [epoch 33 it 33000] dloss = 1.3764574527740479, gloss = -0.6889320015907288, prop_real = 0.07754, modes = 24, kl = 0.03901857253642657
+21-10-28 15:54:29, INFO: [epoch 34 it 34000] dloss = 1.3743040561676025, gloss = -0.6868656873703003, prop_real = 0.0801, modes = 25, kl = 0.04253486028531747
+21-10-28 15:56:25, INFO: [epoch 35 it 35000] dloss = 1.3739092350006104, gloss = -0.688868522644043, prop_real = 0.0706, modes = 24, kl = 0.045077036101703466
+21-10-28 15:58:20, INFO: [epoch 36 it 36000] dloss = 1.3736870288848877, gloss = -0.6862152218818665, prop_real = 0.06494, modes = 23, kl = 0.04694949835573018
+21-10-28 16:00:16, INFO: [epoch 37 it 37000] dloss = 1.3738627433776855, gloss = -0.6845234632492065, prop_real = 0.08196, modes = 25, kl = 0.04004401024490489
+21-10-28 16:02:12, INFO: [epoch 38 it 38000] dloss = 1.3724216222763062, gloss = -0.6854687333106995, prop_real = 0.08148, modes = 25, kl = 0.039672738147351255
+21-10-28 16:04:08, INFO: [epoch 39 it 39000] dloss = 1.3752955198287964, gloss = -0.6836236715316772, prop_real = 0.05808, modes = 24, kl = 0.03781778822292137
+21-10-28 16:06:04, INFO: [epoch 40 it 40000] dloss = 1.3719706535339355, gloss = -0.6844387650489807, prop_real = 0.04668, modes = 23, kl = 0.04993635743350993
+21-10-28 16:07:59, INFO: [epoch 41 it 41000] dloss = 1.3746917247772217, gloss = -0.688639223575592, prop_real = 0.0833, modes = 25, kl = 0.03803971193076863
+21-10-28 16:09:55, INFO: [epoch 42 it 42000] dloss = 1.371434211730957, gloss = -0.6815676689147949, prop_real = 0.06736, modes = 25, kl = 0.04813599714155704
+21-10-28 16:11:50, INFO: [epoch 43 it 43000] dloss = 1.3731995820999146, gloss = -0.6872864365577698, prop_real = 0.07284, modes = 24, kl = 0.032522789549603345
+21-10-28 16:13:44, INFO: [epoch 44 it 44000] dloss = 1.3742733001708984, gloss = -0.6839378476142883, prop_real = 0.07262, modes = 25, kl = 0.03451651293800868
+21-10-28 16:15:39, INFO: [epoch 45 it 45000] dloss = 1.3759065866470337, gloss = -0.6796101331710815, prop_real = 0.065, modes = 25, kl = 0.03165231528851268
+21-10-28 16:17:36, INFO: [epoch 46 it 46000] dloss = 1.3754360675811768, gloss = -0.6853163838386536, prop_real = 0.06806, modes = 25, kl = 0.026318482203631352
+21-10-28 16:19:29, INFO: [epoch 47 it 47000] dloss = 1.3744467496871948, gloss = -0.6925051808357239, prop_real = 0.07278, modes = 25, kl = 0.03301391841953468
+21-10-28 16:21:21, INFO: [epoch 48 it 48000] dloss = 1.3725862503051758, gloss = -0.6863226294517517, prop_real = 0.0628, modes = 25, kl = 0.034248902892914615
+21-10-28 16:23:16, INFO: [epoch 49 it 49000] dloss = 1.3737514019012451, gloss = -0.6858901977539062, prop_real = 0.05736, modes = 24, kl = 0.033173650644674695
+21-10-28 16:25:12, INFO: [epoch 50 it 50000] dloss = 1.3763504028320312, gloss = -0.685151219367981, prop_real = 0.05282, modes = 25, kl = 0.028686381007017453
+21-10-28 16:27:05, INFO: [epoch 51 it 51000] dloss = 1.3668121099472046, gloss = -0.6850149631500244, prop_real = 0.07888, modes = 25, kl = 0.03193389722662971
+21-10-28 16:28:59, INFO: [epoch 52 it 52000] dloss = 1.375948429107666, gloss = -0.6887195706367493, prop_real = 0.07988, modes = 25, kl = 0.029495314030441585
+21-10-28 16:30:56, INFO: [epoch 53 it 53000] dloss = 1.3727244138717651, gloss = -0.6897718906402588, prop_real = 0.067, modes = 25, kl = 0.030470398535124215
+21-10-28 16:32:50, INFO: [epoch 54 it 54000] dloss = 1.375373363494873, gloss = -0.688610851764679, prop_real = 0.09004, modes = 25, kl = 0.0341141589573135
+21-10-28 16:34:42, INFO: [epoch 55 it 55000] dloss = 1.3744821548461914, gloss = -0.6860781908035278, prop_real = 0.0847, modes = 25, kl = 0.030282448332859195
+21-10-28 16:36:38, INFO: [epoch 56 it 56000] dloss = 1.3775707483291626, gloss = -0.693052351474762, prop_real = 0.09166, modes = 25, kl = 0.0394195862931658
+21-10-28 16:38:34, INFO: [epoch 57 it 57000] dloss = 1.3763792514801025, gloss = -0.6913799047470093, prop_real = 0.09482, modes = 25, kl = 0.03944390025030675
+21-10-28 16:40:27, INFO: [epoch 58 it 58000] dloss = 1.3752903938293457, gloss = -0.6888569593429565, prop_real = 0.11024, modes = 25, kl = 0.03659746376297209
+21-10-28 16:42:23, INFO: [epoch 59 it 59000] dloss = 1.3742998838424683, gloss = -0.6904400587081909, prop_real = 0.06172, modes = 24, kl = 0.03714238957780202
+21-10-28 16:44:18, INFO: [epoch 60 it 60000] dloss = 1.3697712421417236, gloss = -0.6840801239013672, prop_real = 0.08294, modes = 25, kl = 0.03441809714261356
+21-10-28 16:46:13, INFO: [epoch 61 it 61000] dloss = 1.3748019933700562, gloss = -0.6855202913284302, prop_real = 0.09112, modes = 25, kl = 0.03785691585653011
+21-10-28 16:48:07, INFO: [epoch 62 it 62000] dloss = 1.375232219696045, gloss = -0.6903971433639526, prop_real = 0.1306, modes = 25, kl = 0.04118145947511287
+21-10-28 16:50:03, INFO: [epoch 63 it 63000] dloss = 1.372976303100586, gloss = -0.6857401132583618, prop_real = 0.14118, modes = 25, kl = 0.046893264869718614
+21-10-28 16:52:01, INFO: [epoch 64 it 64000] dloss = 1.3767898082733154, gloss = -0.6889480352401733, prop_real = 0.13794, modes = 25, kl = 0.04455849939401479
+21-10-28 16:53:58, INFO: [epoch 65 it 65000] dloss = 1.3766827583312988, gloss = -0.6865264773368835, prop_real = 0.1369, modes = 25, kl = 0.043381034047230455
+21-10-28 16:55:55, INFO: [epoch 66 it 66000] dloss = 1.3803361654281616, gloss = -0.6919494271278381, prop_real = 0.17464, modes = 25, kl = 0.048786325753368914
+21-10-28 16:57:53, INFO: [epoch 67 it 67000] dloss = 1.3785171508789062, gloss = -0.6887555718421936, prop_real = 0.19812, modes = 25, kl = 0.046796648091975895
+21-10-28 16:59:50, INFO: [epoch 68 it 68000] dloss = 1.3775763511657715, gloss = -0.6903060674667358, prop_real = 0.21102, modes = 25, kl = 0.04923039271472177
+21-10-28 17:01:48, INFO: [epoch 69 it 69000] dloss = 1.3758677244186401, gloss = -0.6906217932701111, prop_real = 0.18278, modes = 25, kl = 0.047961055797203445
+21-10-28 17:03:48, INFO: [epoch 70 it 70000] dloss = 1.37667977809906, gloss = -0.6857541799545288, prop_real = 0.15274, modes = 25, kl = 0.05474364378427027
+21-10-28 17:05:45, INFO: [epoch 71 it 71000] dloss = 1.3762092590332031, gloss = -0.68986576795578, prop_real = 0.21396, modes = 25, kl = 0.04431743085669472
+21-10-28 17:07:44, INFO: [epoch 72 it 72000] dloss = 1.3769447803497314, gloss = -0.6896826028823853, prop_real = 0.1535, modes = 23, kl = 0.036651685776435954
+21-10-28 17:09:42, INFO: [epoch 73 it 73000] dloss = 1.376842975616455, gloss = -0.6857650876045227, prop_real = 0.21514, modes = 25, kl = 0.037364501039524683
+21-10-28 17:11:37, INFO: [epoch 74 it 74000] dloss = 1.3729262351989746, gloss = -0.68721604347229, prop_real = 0.23798, modes = 24, kl = 0.03302349354848776
+21-10-28 17:13:35, INFO: [epoch 75 it 75000] dloss = 1.3786993026733398, gloss = -0.6906898617744446, prop_real = 0.2519, modes = 25, kl = 0.035818857880035346
+21-10-28 17:15:30, INFO: [epoch 76 it 76000] dloss = 1.3765811920166016, gloss = -0.6846804022789001, prop_real = 0.24752, modes = 24, kl = 0.03199022001671383
+21-10-28 17:17:26, INFO: [epoch 77 it 77000] dloss = 1.3735064268112183, gloss = -0.6867915391921997, prop_real = 0.25106, modes = 24, kl = 0.02758652892218029
+21-10-28 17:19:21, INFO: [epoch 78 it 78000] dloss = 1.3782165050506592, gloss = -0.6870580911636353, prop_real = 0.20198, modes = 23, kl = 0.02778366035343532
+21-10-28 17:21:14, INFO: [epoch 79 it 79000] dloss = 1.3760871887207031, gloss = -0.6919835805892944, prop_real = 0.23918, modes = 24, kl = 0.02784864583152265
+21-10-28 17:23:09, INFO: [epoch 80 it 80000] dloss = 1.3775160312652588, gloss = -0.6867357492446899, prop_real = 0.27676, modes = 24, kl = 0.025926097728008322
+21-10-28 17:25:04, INFO: [epoch 81 it 81000] dloss = 1.3776826858520508, gloss = -0.6931889057159424, prop_real = 0.28976, modes = 24, kl = 0.028094516492330038
+21-10-28 17:27:01, INFO: [epoch 82 it 82000] dloss = 1.3775347471237183, gloss = -0.6872810125350952, prop_real = 0.25276, modes = 23, kl = 0.02556940234377929
+21-10-28 17:28:57, INFO: [epoch 83 it 83000] dloss = 1.377761721611023, gloss = -0.6911777853965759, prop_real = 0.2699, modes = 23, kl = 0.026417546724045
+21-10-28 17:30:52, INFO: [epoch 84 it 84000] dloss = 1.3810229301452637, gloss = -0.6892324686050415, prop_real = 0.31586, modes = 25, kl = 0.02990136411085317
+21-10-28 17:32:47, INFO: [epoch 85 it 85000] dloss = 1.3775677680969238, gloss = -0.6908616423606873, prop_real = 0.32506, modes = 24, kl = 0.024744240946568054
+21-10-28 17:34:41, INFO: [epoch 86 it 86000] dloss = 1.3756476640701294, gloss = -0.6876749396324158, prop_real = 0.30294, modes = 23, kl = 0.021028001480093688
+21-10-28 17:36:36, INFO: [epoch 87 it 87000] dloss = 1.3776800632476807, gloss = -0.6889413595199585, prop_real = 0.17638, modes = 25, kl = 0.022812458414530706
+21-10-28 17:38:32, INFO: [epoch 88 it 88000] dloss = 1.3737657070159912, gloss = -0.6881343126296997, prop_real = 0.33088, modes = 24, kl = 0.01930754535817781
+21-10-28 17:40:27, INFO: [epoch 89 it 89000] dloss = 1.3820518255233765, gloss = -0.6900609731674194, prop_real = 0.33284, modes = 25, kl = 0.0194481821813966
+21-10-28 17:42:23, INFO: [epoch 90 it 90000] dloss = 1.380072832107544, gloss = -0.6883253455162048, prop_real = 0.25142, modes = 25, kl = 0.025485051964833895
+21-10-28 17:44:18, INFO: [epoch 91 it 91000] dloss = 1.3775323629379272, gloss = -0.6887433528900146, prop_real = 0.34656, modes = 25, kl = 0.017860210982119096
+21-10-28 17:46:11, INFO: [epoch 92 it 92000] dloss = 1.3801512718200684, gloss = -0.6882498264312744, prop_real = 0.36358, modes = 24, kl = 0.014998582720714835
+21-10-28 17:53:09, INFO: experiments/rfgan32_mask/models/model_93000.pt
+21-10-28 17:53:37, INFO: [epoch 0 it 93000] dloss = 1.385841965675354, gloss = -0.6788114905357361, prop_real = 0.33682, modes = 25, kl = 0.015948635185973975
+21-10-28 17:55:00, INFO: experiments/rfgan32_mask/models/model_94000.pt
+21-10-28 17:55:29, INFO: [epoch 1 it 94000] dloss = 1.377692461013794, gloss = -0.6914836764335632, prop_real = 0.36422, modes = 25, kl = 0.01664142489735502
+21-10-28 17:56:52, INFO: experiments/rfgan32_mask/models/model_95000.pt
+21-10-28 17:57:20, INFO: [epoch 2 it 95000] dloss = 1.378986120223999, gloss = -0.6888834834098816, prop_real = 0.3731, modes = 25, kl = 0.014486252913728482
+21-10-28 17:58:43, INFO: experiments/rfgan32_mask/models/model_96000.pt
+21-10-28 17:59:12, INFO: [epoch 3 it 96000] dloss = 1.3811073303222656, gloss = -0.692520022392273, prop_real = 0.38062, modes = 25, kl = 0.013734697391653906
+21-10-28 18:00:36, INFO: experiments/rfgan32_mask/models/model_97000.pt
+21-10-28 18:01:05, INFO: [epoch 4 it 97000] dloss = 1.378039002418518, gloss = -0.6858850121498108, prop_real = 0.4216, modes = 25, kl = 0.013025088949469818
+21-10-28 18:02:59, INFO: experiments/rfgan32_mask/models/model_98000.pt
+21-10-28 18:03:29, INFO: [epoch 5 it 98000] dloss = 1.3773696422576904, gloss = -0.6921444535255432, prop_real = 0.4124, modes = 25, kl = 0.013269488021013343
+21-10-28 18:04:54, INFO: experiments/rfgan32_mask/models/model_99000.pt
+21-10-28 18:05:24, INFO: [epoch 6 it 99000] dloss = 1.3763597011566162, gloss = -0.688200056552887, prop_real = 0.29, modes = 24, kl = 0.01226983428535375
+21-10-28 18:06:48, INFO: experiments/rfgan32_mask/models/model_100000.pt
+21-10-28 18:07:16, INFO: [epoch 7 it 100000] dloss = 1.3787246942520142, gloss = -0.6881728172302246, prop_real = 0.43344, modes = 25, kl = 0.012289818298875866
+21-10-28 18:08:41, INFO: experiments/rfgan32_mask/models/model_101000.pt
+21-10-28 18:09:10, INFO: [epoch 8 it 101000] dloss = 1.3776289224624634, gloss = -0.6889610290527344, prop_real = 0.44284, modes = 25, kl = 0.012470040125770271
+21-10-28 18:10:34, INFO: experiments/rfgan32_mask/models/model_102000.pt
+21-10-28 18:11:03, INFO: [epoch 9 it 102000] dloss = 1.377086877822876, gloss = -0.6885508298873901, prop_real = 0.4436, modes = 25, kl = 0.012600036109233895
+21-10-28 18:12:24, INFO: experiments/rfgan32_mask/models/model_103000.pt
+21-10-28 18:12:53, INFO: [epoch 10 it 103000] dloss = 1.375910758972168, gloss = -0.6874740719795227, prop_real = 0.39804, modes = 25, kl = 0.011690663499595758
+21-10-28 18:14:16, INFO: experiments/rfgan32_mask/models/model_104000.pt
+21-10-28 18:14:45, INFO: [epoch 11 it 104000] dloss = 1.3777554035186768, gloss = -0.6901659965515137, prop_real = 0.44768, modes = 25, kl = 0.011870099352243594
+21-10-28 18:16:08, INFO: experiments/rfgan32_mask/models/model_105000.pt
+21-10-28 18:16:38, INFO: [epoch 12 it 105000] dloss = 1.3807289600372314, gloss = -0.691411554813385, prop_real = 0.44998, modes = 25, kl = 0.010758469370450888
+21-10-28 18:18:01, INFO: experiments/rfgan32_mask/models/model_106000.pt
+21-10-28 18:18:29, INFO: [epoch 13 it 106000] dloss = 1.37705397605896, gloss = -0.6867197751998901, prop_real = 0.47066, modes = 25, kl = 0.011319402965185374
+21-10-28 18:19:54, INFO: experiments/rfgan32_mask/models/model_107000.pt
+21-10-28 18:20:22, INFO: [epoch 14 it 107000] dloss = 1.3785040378570557, gloss = -0.6928855776786804, prop_real = 0.44858, modes = 25, kl = 0.012177801196575406
+21-10-28 18:21:46, INFO: experiments/rfgan32_mask/models/model_108000.pt
+21-10-28 18:22:14, INFO: [epoch 15 it 108000] dloss = 1.381333351135254, gloss = -0.6907289028167725, prop_real = 0.45664, modes = 25, kl = 0.011445520131515466
+21-10-28 18:23:37, INFO: experiments/rfgan32_mask/models/model_109000.pt
+21-10-28 18:24:05, INFO: [epoch 16 it 109000] dloss = 1.3780877590179443, gloss = -0.6915692090988159, prop_real = 0.45394, modes = 25, kl = 0.011190042181209201
+21-10-28 18:25:29, INFO: experiments/rfgan32_mask/models/model_110000.pt
+21-10-28 18:25:58, INFO: [epoch 17 it 110000] dloss = 1.3744797706604004, gloss = -0.6889427304267883, prop_real = 0.40974, modes = 25, kl = 0.01211685620964486
+21-10-28 18:27:20, INFO: experiments/rfgan32_mask/models/model_111000.pt
+21-10-28 18:27:48, INFO: [epoch 18 it 111000] dloss = 1.3777451515197754, gloss = -0.6894288659095764, prop_real = 0.46722, modes = 25, kl = 0.01150364687854118
+21-10-28 18:29:13, INFO: experiments/rfgan32_mask/models/model_112000.pt
+21-10-28 18:29:42, INFO: [epoch 19 it 112000] dloss = 1.3799374103546143, gloss = -0.6890822649002075, prop_real = 0.3721, modes = 25, kl = 0.013674716566583228
+21-10-28 18:31:05, INFO: experiments/rfgan32_mask/models/model_113000.pt
+21-10-28 18:31:34, INFO: [epoch 20 it 113000] dloss = 1.37529718875885, gloss = -0.6875554323196411, prop_real = 0.42998, modes = 25, kl = 0.011723040090409488
+21-10-28 18:32:55, INFO: experiments/rfgan32_mask/models/model_114000.pt
+21-10-28 18:33:23, INFO: [epoch 21 it 114000] dloss = 1.375285267829895, gloss = -0.6896336078643799, prop_real = 0.48512, modes = 25, kl = 0.012151575595783667
+21-10-28 18:34:44, INFO: experiments/rfgan32_mask/models/model_115000.pt
+21-10-28 18:35:13, INFO: [epoch 22 it 115000] dloss = 1.378908634185791, gloss = -0.6902894377708435, prop_real = 0.31016, modes = 25, kl = 0.013432647963381148
+21-10-28 18:36:35, INFO: experiments/rfgan32_mask/models/model_116000.pt
+21-10-28 18:37:04, INFO: [epoch 23 it 116000] dloss = 1.381723165512085, gloss = -0.6899556517601013, prop_real = 0.29648, modes = 25, kl = 0.013224751258458681
+21-10-28 18:38:26, INFO: experiments/rfgan32_mask/models/model_117000.pt
+21-10-28 18:38:54, INFO: [epoch 24 it 117000] dloss = 1.3820854425430298, gloss = -0.691186785697937, prop_real = 0.49348, modes = 25, kl = 0.012286211684692582
+21-10-28 18:40:16, INFO: experiments/rfgan32_mask/models/model_118000.pt
+21-10-28 18:40:44, INFO: [epoch 25 it 118000] dloss = 1.3782076835632324, gloss = -0.6910422444343567, prop_real = 0.4912, modes = 25, kl = 0.012258026179197497
+21-10-28 18:42:06, INFO: experiments/rfgan32_mask/models/model_119000.pt
+21-10-28 18:42:34, INFO: [epoch 26 it 119000] dloss = 1.3767786026000977, gloss = -0.6919915676116943, prop_real = 0.42388, modes = 25, kl = 0.012468912990015187
+21-10-28 18:43:58, INFO: experiments/rfgan32_mask/models/model_120000.pt
+21-10-28 18:44:26, INFO: [epoch 27 it 120000] dloss = 1.375783085823059, gloss = -0.6938303112983704, prop_real = 0.4648, modes = 25, kl = 0.01294970323357664
+21-10-28 18:45:50, INFO: experiments/rfgan32_mask/models/model_121000.pt
+21-10-28 18:46:18, INFO: [epoch 28 it 121000] dloss = 1.3801257610321045, gloss = -0.6889872550964355, prop_real = 0.47138, modes = 25, kl = 0.01243285561609652
+21-10-28 18:47:40, INFO: experiments/rfgan32_mask/models/model_122000.pt
+21-10-28 18:48:08, INFO: [epoch 29 it 122000] dloss = 1.3789763450622559, gloss = -0.6905726194381714, prop_real = 0.50768, modes = 25, kl = 0.013023513718374805
+21-10-28 18:49:31, INFO: experiments/rfgan32_mask/models/model_123000.pt
+21-10-28 18:49:59, INFO: [epoch 30 it 123000] dloss = 1.3783831596374512, gloss = -0.6901307702064514, prop_real = 0.5115, modes = 25, kl = 0.0134772170309665
+21-10-28 18:51:24, INFO: experiments/rfgan32_mask/models/model_124000.pt
+21-10-28 18:51:52, INFO: [epoch 31 it 124000] dloss = 1.3801335096359253, gloss = -0.6886938214302063, prop_real = 0.49728, modes = 25, kl = 0.013673920500917673
+21-10-28 18:53:17, INFO: experiments/rfgan32_mask/models/model_125000.pt
+21-10-28 18:53:45, INFO: [epoch 32 it 125000] dloss = 1.3771088123321533, gloss = -0.6873098015785217, prop_real = 0.45676, modes = 25, kl = 0.014030982984097135
+21-10-28 18:55:08, INFO: experiments/rfgan32_mask/models/model_126000.pt
+21-10-28 18:55:36, INFO: [epoch 33 it 126000] dloss = 1.38429856300354, gloss = -0.6923544406890869, prop_real = 0.4983, modes = 25, kl = 0.01343885757002792
+21-10-28 18:56:58, INFO: experiments/rfgan32_mask/models/model_127000.pt
+21-10-28 18:57:27, INFO: [epoch 34 it 127000] dloss = 1.3766552209854126, gloss = -0.6861246824264526, prop_real = 0.51322, modes = 25, kl = 0.013447725772911305
+21-10-28 18:58:51, INFO: experiments/rfgan32_mask/models/model_128000.pt
+21-10-28 18:59:19, INFO: [epoch 35 it 128000] dloss = 1.3794946670532227, gloss = -0.6888536214828491, prop_real = 0.52968, modes = 25, kl = 0.014380511105552076
+21-10-28 19:00:43, INFO: experiments/rfgan32_mask/models/model_129000.pt
+21-10-28 19:01:12, INFO: [epoch 36 it 129000] dloss = 1.3777134418487549, gloss = -0.690122663974762, prop_real = 0.45206, modes = 25, kl = 0.013966715150303037
+21-10-28 19:02:36, INFO: experiments/rfgan32_mask/models/model_130000.pt
+21-10-28 19:03:05, INFO: [epoch 37 it 130000] dloss = 1.3789606094360352, gloss = -0.6914730668067932, prop_real = 0.51248, modes = 25, kl = 0.014322861785101922
+21-10-28 19:04:27, INFO: experiments/rfgan32_mask/models/model_131000.pt
+21-10-28 19:04:55, INFO: [epoch 38 it 131000] dloss = 1.380721926689148, gloss = -0.6907405853271484, prop_real = 0.53508, modes = 25, kl = 0.013985880473253831
+21-10-28 19:06:19, INFO: experiments/rfgan32_mask/models/model_132000.pt
+21-10-28 19:06:47, INFO: [epoch 39 it 132000] dloss = 1.3791207075119019, gloss = -0.6890513300895691, prop_real = 0.4778, modes = 25, kl = 0.014561898262245531
+21-10-28 19:08:10, INFO: experiments/rfgan32_mask/models/model_133000.pt
+21-10-28 19:08:39, INFO: [epoch 40 it 133000] dloss = 1.3794054985046387, gloss = -0.6865546107292175, prop_real = 0.361, modes = 25, kl = 0.0145087770571801
+21-10-28 19:10:02, INFO: experiments/rfgan32_mask/models/model_134000.pt
+21-10-28 19:10:30, INFO: [epoch 41 it 134000] dloss = 1.3769786357879639, gloss = -0.686731219291687, prop_real = 0.52714, modes = 25, kl = 0.014668984615450457
+21-10-28 19:11:52, INFO: experiments/rfgan32_mask/models/model_135000.pt
+21-10-28 19:12:20, INFO: [epoch 42 it 135000] dloss = 1.379228949546814, gloss = -0.6909315586090088, prop_real = 0.5188, modes = 25, kl = 0.015142242272314813
+21-10-28 19:13:44, INFO: experiments/rfgan32_mask/models/model_136000.pt
+21-10-28 19:14:11, INFO: [epoch 43 it 136000] dloss = 1.3803094625473022, gloss = -0.6898950934410095, prop_real = 0.54602, modes = 25, kl = 0.014763842252460451
+21-10-28 19:15:36, INFO: experiments/rfgan32_mask/models/model_137000.pt
+21-10-28 19:16:03, INFO: [epoch 44 it 137000] dloss = 1.3800694942474365, gloss = -0.6911149621009827, prop_real = 0.53638, modes = 25, kl = 0.014722369816466373
+21-10-28 19:17:26, INFO: experiments/rfgan32_mask/models/model_138000.pt
+21-10-28 19:17:53, INFO: [epoch 45 it 138000] dloss = 1.3772835731506348, gloss = -0.6860626339912415, prop_real = 0.55162, modes = 25, kl = 0.015362382980897458
+21-10-28 19:19:17, INFO: experiments/rfgan32_mask/models/model_139000.pt
+21-10-28 19:19:43, INFO: [epoch 46 it 139000] dloss = 1.3780385255813599, gloss = -0.6894106864929199, prop_real = 0.52518, modes = 25, kl = 0.015059700121029194
+21-10-28 19:21:04, INFO: experiments/rfgan32_mask/models/model_140000.pt
+21-10-28 19:21:31, INFO: [epoch 47 it 140000] dloss = 1.380639910697937, gloss = -0.6883568167686462, prop_real = 0.55212, modes = 25, kl = 0.01490517686947586
+21-10-28 19:22:51, INFO: experiments/rfgan32_mask/models/model_141000.pt
+21-10-28 19:23:18, INFO: [epoch 48 it 141000] dloss = 1.3787312507629395, gloss = -0.689613938331604, prop_real = 0.55668, modes = 25, kl = 0.015166396444424423
+21-10-28 19:24:38, INFO: experiments/rfgan32_mask/models/model_142000.pt
+21-10-28 19:25:05, INFO: [epoch 49 it 142000] dloss = 1.379302740097046, gloss = -0.6890751719474792, prop_real = 0.53362, modes = 25, kl = 0.014624152962651332
+21-10-28 19:26:27, INFO: experiments/rfgan32_mask/models/model_143000.pt
+21-10-28 19:26:54, INFO: [epoch 50 it 143000] dloss = 1.3806570768356323, gloss = -0.6888660788536072, prop_real = 0.53244, modes = 25, kl = 0.014810245749203244
+21-10-28 19:28:14, INFO: experiments/rfgan32_mask/models/model_144000.pt
+21-10-28 19:28:39, INFO: [epoch 51 it 144000] dloss = 1.3757553100585938, gloss = -0.6888207793235779, prop_real = 0.54036, modes = 25, kl = 0.01483001583263989
+21-10-28 19:30:01, INFO: experiments/rfgan32_mask/models/model_145000.pt
+21-10-28 19:30:26, INFO: [epoch 52 it 145000] dloss = 1.3807642459869385, gloss = -0.6928815245628357, prop_real = 0.56588, modes = 25, kl = 0.014515856084309862
+21-10-28 19:31:48, INFO: experiments/rfgan32_mask/models/model_146000.pt
+21-10-28 19:32:14, INFO: [epoch 53 it 146000] dloss = 1.380157709121704, gloss = -0.689984142780304, prop_real = 0.54982, modes = 25, kl = 0.01406984642210182
+21-10-28 19:33:36, INFO: experiments/rfgan32_mask/models/model_147000.pt
+21-10-28 19:34:02, INFO: [epoch 54 it 147000] dloss = 1.3802740573883057, gloss = -0.6920362114906311, prop_real = 0.55228, modes = 25, kl = 0.014329164451202804
+21-10-28 19:35:24, INFO: experiments/rfgan32_mask/models/model_148000.pt
+21-10-28 19:35:50, INFO: [epoch 55 it 148000] dloss = 1.380878210067749, gloss = -0.6873286366462708, prop_real = 0.55276, modes = 25, kl = 0.013731557406691018
+21-10-28 19:37:10, INFO: experiments/rfgan32_mask/models/model_149000.pt
+21-10-28 19:37:37, INFO: [epoch 56 it 149000] dloss = 1.3788821697235107, gloss = -0.6906093955039978, prop_real = 0.5791, modes = 25, kl = 0.013388043099921518
+21-10-28 19:38:59, INFO: experiments/rfgan32_mask/models/model_150000.pt
+21-10-28 19:39:26, INFO: [epoch 57 it 150000] dloss = 1.3782992362976074, gloss = -0.689868152141571, prop_real = 0.56666, modes = 25, kl = 0.013155960059142635
+21-10-28 19:40:47, INFO: experiments/rfgan32_mask/models/model_151000.pt
+21-10-28 19:41:14, INFO: [epoch 58 it 151000] dloss = 1.3811434507369995, gloss = -0.690960705280304, prop_real = 0.58866, modes = 25, kl = 0.012843083350608615
+21-10-28 19:42:36, INFO: experiments/rfgan32_mask/models/model_152000.pt
+21-10-28 19:43:02, INFO: [epoch 59 it 152000] dloss = 1.3774179220199585, gloss = -0.6881924867630005, prop_real = 0.58466, modes = 25, kl = 0.01207001017129147
+21-10-28 19:44:24, INFO: experiments/rfgan32_mask/models/model_153000.pt
+21-10-28 19:44:52, INFO: [epoch 60 it 153000] dloss = 1.3806538581848145, gloss = -0.6936850547790527, prop_real = 0.57428, modes = 25, kl = 0.012085040356082714
+21-10-28 19:46:14, INFO: experiments/rfgan32_mask/models/model_154000.pt
+21-10-28 19:46:41, INFO: [epoch 61 it 154000] dloss = 1.376298427581787, gloss = -0.6862359642982483, prop_real = 0.59556, modes = 25, kl = 0.011776025737818928
+21-10-28 19:48:03, INFO: experiments/rfgan32_mask/models/model_155000.pt
+21-10-28 19:48:30, INFO: [epoch 62 it 155000] dloss = 1.3822760581970215, gloss = -0.693461000919342, prop_real = 0.55488, modes = 25, kl = 0.011481124261945173
+21-10-28 19:49:52, INFO: experiments/rfgan32_mask/models/model_156000.pt
+21-10-28 19:50:19, INFO: [epoch 63 it 156000] dloss = 1.3786309957504272, gloss = -0.688108503818512, prop_real = 0.59868, modes = 25, kl = 0.010933638275152067
+21-10-28 19:51:40, INFO: experiments/rfgan32_mask/models/model_157000.pt
+21-10-28 19:52:07, INFO: [epoch 64 it 157000] dloss = 1.3806414604187012, gloss = -0.6893984079360962, prop_real = 0.57714, modes = 25, kl = 0.010836696826063412
+21-10-28 19:53:29, INFO: experiments/rfgan32_mask/models/model_158000.pt
+21-10-28 19:53:56, INFO: [epoch 65 it 158000] dloss = 1.3790428638458252, gloss = -0.6922051310539246, prop_real = 0.58952, modes = 25, kl = 0.010389625131193899
+21-10-28 19:55:14, INFO: experiments/rfgan32_mask/models/model_159000.pt
+21-10-28 19:55:42, INFO: [epoch 66 it 159000] dloss = 1.377118468284607, gloss = -0.6880788803100586, prop_real = 0.61724, modes = 25, kl = 0.009351395907704733
+21-10-28 19:57:02, INFO: experiments/rfgan32_mask/models/model_160000.pt
+21-10-28 19:57:28, INFO: [epoch 67 it 160000] dloss = 1.3814163208007812, gloss = -0.6902230978012085, prop_real = 0.62198, modes = 25, kl = 0.009281925651923139
+21-10-28 19:58:47, INFO: experiments/rfgan32_mask/models/model_161000.pt
+21-10-28 19:59:14, INFO: [epoch 68 it 161000] dloss = 1.379082202911377, gloss = -0.6870719790458679, prop_real = 0.60744, modes = 25, kl = 0.00894090445688353
+21-10-28 20:00:34, INFO: experiments/rfgan32_mask/models/model_162000.pt
+21-10-28 20:01:02, INFO: [epoch 69 it 162000] dloss = 1.3822360038757324, gloss = -0.6894593834877014, prop_real = 0.57516, modes = 25, kl = 0.008181605878842063
+21-10-28 20:02:23, INFO: experiments/rfgan32_mask/models/model_163000.pt
+21-10-28 20:02:50, INFO: [epoch 70 it 163000] dloss = 1.3789645433425903, gloss = -0.690648078918457, prop_real = 0.63086, modes = 25, kl = 0.008160818856171924
+21-10-28 20:04:12, INFO: experiments/rfgan32_mask/models/model_164000.pt
+21-10-28 20:04:38, INFO: [epoch 71 it 164000] dloss = 1.3825976848602295, gloss = -0.6910096406936646, prop_real = 0.6211, modes = 25, kl = 0.007697412455494808
+21-10-28 20:06:00, INFO: experiments/rfgan32_mask/models/model_165000.pt
+21-10-28 20:06:27, INFO: [epoch 72 it 165000] dloss = 1.3818753957748413, gloss = -0.6906694173812866, prop_real = 0.63772, modes = 25, kl = 0.007209814440391715
+21-10-28 20:07:49, INFO: experiments/rfgan32_mask/models/model_166000.pt
+21-10-28 20:08:16, INFO: [epoch 73 it 166000] dloss = 1.3804961442947388, gloss = -0.689459502696991, prop_real = 0.64768, modes = 25, kl = 0.006802234815330609
+21-10-28 20:09:38, INFO: experiments/rfgan32_mask/models/model_167000.pt
+21-10-28 20:10:04, INFO: [epoch 74 it 167000] dloss = 1.3805127143859863, gloss = -0.6914718747138977, prop_real = 0.61206, modes = 25, kl = 0.0065615000093505104
+21-10-28 20:11:27, INFO: experiments/rfgan32_mask/models/model_168000.pt
+21-10-28 20:11:54, INFO: [epoch 75 it 168000] dloss = 1.3833889961242676, gloss = -0.692352831363678, prop_real = 0.6398, modes = 25, kl = 0.006173361008336158
+21-10-28 20:13:16, INFO: experiments/rfgan32_mask/models/model_169000.pt
+21-10-28 20:13:44, INFO: [epoch 76 it 169000] dloss = 1.3812283277511597, gloss = -0.6910711526870728, prop_real = 0.65826, modes = 25, kl = 0.005849832815939393
+21-10-28 20:15:06, INFO: experiments/rfgan32_mask/models/model_170000.pt
+21-10-28 20:15:35, INFO: [epoch 77 it 170000] dloss = 1.383313775062561, gloss = -0.6939762234687805, prop_real = 0.65202, modes = 25, kl = 0.0053574779386383695
+21-10-28 20:16:57, INFO: experiments/rfgan32_mask/models/model_171000.pt
+21-10-28 20:17:26, INFO: [epoch 78 it 171000] dloss = 1.3847426176071167, gloss = -0.692126452922821, prop_real = 0.62522, modes = 25, kl = 0.005029624452556424
+21-10-28 20:18:48, INFO: experiments/rfgan32_mask/models/model_172000.pt
+21-10-28 20:19:16, INFO: [epoch 79 it 172000] dloss = 1.3785375356674194, gloss = -0.6887125968933105, prop_real = 0.65036, modes = 25, kl = 0.004973883012632202
+21-10-28 20:20:38, INFO: experiments/rfgan32_mask/models/model_173000.pt
+21-10-28 20:21:06, INFO: [epoch 80 it 173000] dloss = 1.3825658559799194, gloss = -0.6940093636512756, prop_real = 0.5841, modes = 25, kl = 0.004901460670022989
+21-10-28 20:22:29, INFO: experiments/rfgan32_mask/models/model_174000.pt
+21-10-28 20:22:57, INFO: [epoch 81 it 174000] dloss = 1.3824167251586914, gloss = -0.6888357400894165, prop_real = 0.66636, modes = 25, kl = 0.004589039425443859
+21-10-28 20:24:19, INFO: experiments/rfgan32_mask/models/model_175000.pt
+21-10-28 20:24:47, INFO: [epoch 82 it 175000] dloss = 1.381235122680664, gloss = -0.6888337731361389, prop_real = 0.66592, modes = 25, kl = 0.004255217812068269
+21-10-28 20:26:11, INFO: experiments/rfgan32_mask/models/model_176000.pt
+21-10-28 20:26:39, INFO: [epoch 83 it 176000] dloss = 1.3840835094451904, gloss = -0.6922762393951416, prop_real = 0.6427, modes = 25, kl = 0.0042064461337925985
+21-10-28 20:28:02, INFO: experiments/rfgan32_mask/models/model_177000.pt
+21-10-28 20:28:31, INFO: [epoch 84 it 177000] dloss = 1.3805932998657227, gloss = -0.6863248348236084, prop_real = 0.63718, modes = 25, kl = 0.003884056942689529
+21-10-28 20:29:53, INFO: experiments/rfgan32_mask/models/model_178000.pt
+21-10-28 20:30:20, INFO: [epoch 85 it 178000] dloss = 1.3790440559387207, gloss = -0.6879287362098694, prop_real = 0.6308, modes = 25, kl = 0.003621372060330497
+21-10-28 20:31:41, INFO: experiments/rfgan32_mask/models/model_179000.pt
+21-10-28 20:32:09, INFO: [epoch 86 it 179000] dloss = 1.3835691213607788, gloss = -0.6931667923927307, prop_real = 0.67662, modes = 25, kl = 0.003551045418956479
+21-10-28 20:33:30, INFO: experiments/rfgan32_mask/models/model_180000.pt
+21-10-28 20:33:57, INFO: [epoch 87 it 180000] dloss = 1.3842403888702393, gloss = -0.6917222738265991, prop_real = 0.65688, modes = 25, kl = 0.0032816739599094437
+21-10-28 20:35:20, INFO: experiments/rfgan32_mask/models/model_181000.pt
+21-10-28 20:35:48, INFO: [epoch 88 it 181000] dloss = 1.3763340711593628, gloss = -0.6869679093360901, prop_real = 0.67336, modes = 25, kl = 0.0031799496216986787
+21-10-28 20:37:10, INFO: experiments/rfgan32_mask/models/model_182000.pt
+21-10-28 20:37:37, INFO: [epoch 89 it 182000] dloss = 1.381536602973938, gloss = -0.6900663375854492, prop_real = 0.67496, modes = 25, kl = 0.0032803063448350123
+21-10-28 20:38:59, INFO: experiments/rfgan32_mask/models/model_183000.pt
+21-10-28 20:39:27, INFO: [epoch 90 it 183000] dloss = 1.3797426223754883, gloss = -0.6898351907730103, prop_real = 0.68362, modes = 25, kl = 0.0032154264346458813
+21-10-28 20:40:49, INFO: experiments/rfgan32_mask/models/model_184000.pt
+21-10-28 20:41:17, INFO: [epoch 91 it 184000] dloss = 1.3816126585006714, gloss = -0.692272961139679, prop_real = 0.68574, modes = 25, kl = 0.003016441234021663
+21-10-28 20:42:39, INFO: experiments/rfgan32_mask/models/model_185000.pt
+21-10-28 20:43:06, INFO: [epoch 92 it 185000] dloss = 1.379683017730713, gloss = -0.6867173910140991, prop_real = 0.65852, modes = 25, kl = 0.0028518685080997533
+21-10-28 20:44:30, INFO: experiments/rfgan32_mask/models/model_186000.pt
+21-10-28 20:44:57, INFO: [epoch 93 it 186000] dloss = 1.3832674026489258, gloss = -0.6951972246170044, prop_real = 0.66808, modes = 25, kl = 0.002762230023491917
+21-10-28 20:46:19, INFO: experiments/rfgan32_mask/models/model_187000.pt
+21-10-28 20:46:46, INFO: [epoch 94 it 187000] dloss = 1.38077974319458, gloss = -0.6891101002693176, prop_real = 0.67526, modes = 25, kl = 0.002574166369396461
+21-10-28 20:48:07, INFO: experiments/rfgan32_mask/models/model_188000.pt
+21-10-28 20:48:34, INFO: [epoch 95 it 188000] dloss = 1.3814921379089355, gloss = -0.6875791549682617, prop_real = 0.66582, modes = 25, kl = 0.002662468241252357
+21-10-28 20:49:55, INFO: experiments/rfgan32_mask/models/model_189000.pt
+21-10-28 20:50:22, INFO: [epoch 96 it 189000] dloss = 1.3818738460540771, gloss = -0.691685140132904, prop_real = 0.69026, modes = 25, kl = 0.0024823321023558615
+21-10-28 20:51:44, INFO: experiments/rfgan32_mask/models/model_190000.pt
+21-10-28 20:52:11, INFO: [epoch 97 it 190000] dloss = 1.3809462785720825, gloss = -0.6902581453323364, prop_real = 0.70226, modes = 25, kl = 0.0024168316645822715
+21-10-28 20:53:31, INFO: experiments/rfgan32_mask/models/model_191000.pt
+21-10-28 20:53:58, INFO: [epoch 98 it 191000] dloss = 1.3822498321533203, gloss = -0.6913226246833801, prop_real = 0.66572, modes = 25, kl = 0.002309683577492433
+21-10-28 20:55:20, INFO: experiments/rfgan32_mask/models/model_192000.pt
+21-10-28 20:55:46, INFO: [epoch 99 it 192000] dloss = 1.3846509456634521, gloss = -0.695202112197876, prop_real = 0.68954, modes = 25, kl = 0.002315052635514524
+21-10-28 20:57:07, INFO: experiments/rfgan32_mask/models/model_193000.pt
+21-10-28 20:57:34, INFO: [epoch 100 it 193000] dloss = 1.381346344947815, gloss = -0.6884849667549133, prop_real = 0.68764, modes = 25, kl = 0.002221960430705216
+21-10-28 20:58:54, INFO: experiments/rfgan32_mask/models/model_194000.pt
+21-10-28 20:59:21, INFO: [epoch 101 it 194000] dloss = 1.3815196752548218, gloss = -0.6893588304519653, prop_real = 0.69866, modes = 25, kl = 0.0023732763522818353
+21-10-28 21:00:42, INFO: experiments/rfgan32_mask/models/model_195000.pt
+21-10-28 21:01:08, INFO: [epoch 102 it 195000] dloss = 1.3842968940734863, gloss = -0.6924134492874146, prop_real = 0.69358, modes = 25, kl = 0.002162041561081691
+21-10-28 21:02:30, INFO: experiments/rfgan32_mask/models/model_196000.pt
+21-10-28 21:02:57, INFO: [epoch 103 it 196000] dloss = 1.3814371824264526, gloss = -0.6882777214050293, prop_real = 0.69972, modes = 25, kl = 0.0020012823946577406
+21-10-28 21:04:19, INFO: experiments/rfgan32_mask/models/model_197000.pt
+21-10-28 21:04:47, INFO: [epoch 104 it 197000] dloss = 1.3822433948516846, gloss = -0.690711498260498, prop_real = 0.58884, modes = 25, kl = 0.0018762701850717147
+21-10-28 21:06:08, INFO: experiments/rfgan32_mask/models/model_198000.pt
+21-10-28 21:06:36, INFO: [epoch 105 it 198000] dloss = 1.3822667598724365, gloss = -0.6910613775253296, prop_real = 0.71132, modes = 25, kl = 0.0017578723984708927
+21-10-28 21:07:58, INFO: experiments/rfgan32_mask/models/model_199000.pt
+21-10-28 21:08:27, INFO: [epoch 106 it 199000] dloss = 1.382664680480957, gloss = -0.6920932531356812, prop_real = 0.70294, modes = 25, kl = 0.00183901567804419
+21-10-28 21:09:49, INFO: experiments/rfgan32_mask/models/model_200000.pt
+21-10-28 21:10:16, INFO: [epoch 107 it 200000] dloss = 1.3830605745315552, gloss = -0.6918261051177979, prop_real = 0.70006, modes = 25, kl = 0.0017060299310295993
+21-10-28 21:11:38, INFO: experiments/rfgan32_mask/models/model_201000.pt
+21-10-28 21:12:06, INFO: [epoch 108 it 201000] dloss = 1.3837213516235352, gloss = -0.6905622482299805, prop_real = 0.71496, modes = 25, kl = 0.0016013782844326364
+21-10-28 21:13:27, INFO: experiments/rfgan32_mask/models/model_202000.pt
+21-10-28 21:13:54, INFO: [epoch 109 it 202000] dloss = 1.3810906410217285, gloss = -0.6892001032829285, prop_real = 0.68732, modes = 25, kl = 0.001732022243686837
+21-10-29 01:53:42, INFO: experiments/rfgan32_mask/models/model_203000.pt
+21-10-29 01:54:10, INFO: [epoch 0 it 203000] dloss = 1.3856172561645508, gloss = -0.6916728019714355, prop_real = 0.70394, modes = 25, kl = 0.002109764426983578
+21-10-29 01:55:37, INFO: experiments/rfgan32_mask/models/model_204000.pt
+21-10-29 01:56:04, INFO: [epoch 1 it 204000] dloss = 1.3832643032073975, gloss = -0.6946319341659546, prop_real = 0.72318, modes = 25, kl = 0.002439059517689702
+21-10-29 01:57:31, INFO: experiments/rfgan32_mask/models/model_205000.pt
+21-10-29 01:57:58, INFO: [epoch 2 it 205000] dloss = 1.3822888135910034, gloss = -0.691787838935852, prop_real = 0.73336, modes = 25, kl = 0.002064462541370297
+21-10-29 01:59:25, INFO: experiments/rfgan32_mask/models/model_206000.pt
+21-10-29 01:59:53, INFO: [epoch 3 it 206000] dloss = 1.3842040300369263, gloss = -0.6914046406745911, prop_real = 0.71322, modes = 25, kl = 0.0020688408396201865
+21-10-29 02:01:20, INFO: experiments/rfgan32_mask/models/model_207000.pt
+21-10-29 02:01:48, INFO: [epoch 4 it 207000] dloss = 1.3839311599731445, gloss = -0.6914534568786621, prop_real = 0.7023, modes = 25, kl = 0.00195956982746419
+21-10-29 02:03:16, INFO: experiments/rfgan32_mask/models/model_208000.pt
+21-10-29 02:03:43, INFO: [epoch 5 it 208000] dloss = 1.3852105140686035, gloss = -0.6928247213363647, prop_real = 0.7169, modes = 25, kl = 0.001945287826229678
+21-10-29 02:05:11, INFO: experiments/rfgan32_mask/models/model_209000.pt
+21-10-29 02:05:38, INFO: [epoch 6 it 209000] dloss = 1.3830455541610718, gloss = -0.6901913285255432, prop_real = 0.70382, modes = 25, kl = 0.0017850539583176496
+21-10-29 02:07:05, INFO: experiments/rfgan32_mask/models/model_210000.pt
+21-10-29 02:07:33, INFO: [epoch 7 it 210000] dloss = 1.383129358291626, gloss = -0.692736804485321, prop_real = 0.6647, modes = 25, kl = 0.0018229300581303906
+21-10-29 02:09:00, INFO: experiments/rfgan32_mask/models/model_211000.pt
+21-10-29 02:09:27, INFO: [epoch 8 it 211000] dloss = 1.3830146789550781, gloss = -0.6932162046432495, prop_real = 0.73568, modes = 25, kl = 0.001735960285356392
+21-10-29 02:10:53, INFO: experiments/rfgan32_mask/models/model_212000.pt
+21-10-29 02:11:21, INFO: [epoch 9 it 212000] dloss = 1.3837940692901611, gloss = -0.6924355030059814, prop_real = 0.70424, modes = 25, kl = 0.0015832465402515488
+21-10-29 02:12:48, INFO: experiments/rfgan32_mask/models/model_213000.pt
+21-10-29 02:13:16, INFO: [epoch 10 it 213000] dloss = 1.3822031021118164, gloss = -0.6890896558761597, prop_real = 0.72516, modes = 25, kl = 0.0016197681179828966
+21-10-29 02:14:43, INFO: experiments/rfgan32_mask/models/model_214000.pt
+21-10-29 02:15:10, INFO: [epoch 11 it 214000] dloss = 1.3830914497375488, gloss = -0.6911566257476807, prop_real = 0.71692, modes = 25, kl = 0.0016024889892794327
+21-10-29 02:16:37, INFO: experiments/rfgan32_mask/models/model_215000.pt
+21-10-29 02:17:04, INFO: [epoch 12 it 215000] dloss = 1.3839898109436035, gloss = -0.6936687231063843, prop_real = 0.73414, modes = 25, kl = 0.0015903673955268284
+21-10-29 02:18:30, INFO: experiments/rfgan32_mask/models/model_216000.pt
+21-10-29 02:18:58, INFO: [epoch 13 it 216000] dloss = 1.3816354274749756, gloss = -0.689493715763092, prop_real = 0.65786, modes = 25, kl = 0.0013836849849857454
+21-10-29 02:20:24, INFO: experiments/rfgan32_mask/models/model_217000.pt
+21-10-29 02:20:52, INFO: [epoch 14 it 217000] dloss = 1.3848555088043213, gloss = -0.6937695145606995, prop_real = 0.69376, modes = 25, kl = 0.0012930231553907382
+21-10-29 02:22:19, INFO: experiments/rfgan32_mask/models/model_218000.pt
+21-10-29 02:22:46, INFO: [epoch 15 it 218000] dloss = 1.3848769664764404, gloss = -0.6932885050773621, prop_real = 0.74604, modes = 25, kl = 0.0013137214213501782
+21-10-29 02:24:13, INFO: experiments/rfgan32_mask/models/model_219000.pt
+21-10-29 02:24:40, INFO: [epoch 16 it 219000] dloss = 1.384671688079834, gloss = -0.6899060010910034, prop_real = 0.74974, modes = 25, kl = 0.001294678781412378
+21-10-29 02:26:08, INFO: experiments/rfgan32_mask/models/model_220000.pt
+21-10-29 02:26:35, INFO: [epoch 17 it 220000] dloss = 1.3821005821228027, gloss = -0.6899957060813904, prop_real = 0.72776, modes = 25, kl = 0.0013084836242096072
+21-10-29 02:28:02, INFO: experiments/rfgan32_mask/models/model_221000.pt
+21-10-29 02:28:29, INFO: [epoch 18 it 221000] dloss = 1.3831827640533447, gloss = -0.6937131881713867, prop_real = 0.74204, modes = 25, kl = 0.0011720244283556342
+21-10-29 02:29:56, INFO: experiments/rfgan32_mask/models/model_222000.pt
+21-10-29 02:30:23, INFO: [epoch 19 it 222000] dloss = 1.3836238384246826, gloss = -0.6947648525238037, prop_real = 0.70926, modes = 25, kl = 0.0011649706519270592
+21-10-29 02:31:50, INFO: experiments/rfgan32_mask/models/model_223000.pt
+21-10-29 02:32:19, INFO: [epoch 20 it 223000] dloss = 1.3824342489242554, gloss = -0.6929419040679932, prop_real = 0.58862, modes = 25, kl = 0.0010013457651891471
+21-10-29 02:33:45, INFO: experiments/rfgan32_mask/models/model_224000.pt
+21-10-29 02:34:12, INFO: [epoch 21 it 224000] dloss = 1.3803539276123047, gloss = -0.6891459226608276, prop_real = 0.70836, modes = 25, kl = 0.0010847850323626755
+21-10-29 02:35:38, INFO: experiments/rfgan32_mask/models/model_225000.pt
+21-10-29 02:36:06, INFO: [epoch 22 it 225000] dloss = 1.3826892375946045, gloss = -0.6925866603851318, prop_real = 0.73664, modes = 25, kl = 0.000950629377258325
+21-10-29 02:37:32, INFO: experiments/rfgan32_mask/models/model_226000.pt
+21-10-29 02:38:00, INFO: [epoch 23 it 226000] dloss = 1.383042573928833, gloss = -0.6895031332969666, prop_real = 0.71782, modes = 25, kl = 0.0008769807229109944
+21-10-29 02:39:25, INFO: experiments/rfgan32_mask/models/model_227000.pt
+21-10-29 02:39:52, INFO: [epoch 24 it 227000] dloss = 1.3818848133087158, gloss = -0.6889665126800537, prop_real = 0.7245, modes = 25, kl = 0.0011180506427583166
+21-10-29 02:41:18, INFO: experiments/rfgan32_mask/models/model_228000.pt
+21-10-29 02:41:46, INFO: [epoch 25 it 228000] dloss = 1.3814406394958496, gloss = -0.690067708492279, prop_real = 0.74652, modes = 25, kl = 0.0010060306627166986
+21-10-29 02:43:11, INFO: experiments/rfgan32_mask/models/model_229000.pt
+21-10-29 02:43:39, INFO: [epoch 26 it 229000] dloss = 1.3835890293121338, gloss = -0.69603031873703, prop_real = 0.75006, modes = 25, kl = 0.0009164710160245392
+21-10-29 02:45:05, INFO: experiments/rfgan32_mask/models/model_230000.pt
+21-10-29 02:45:32, INFO: [epoch 27 it 230000] dloss = 1.380046010017395, gloss = -0.6905658841133118, prop_real = 0.7586, modes = 25, kl = 0.0008773812319334173
+21-10-29 02:46:58, INFO: experiments/rfgan32_mask/models/model_231000.pt
+21-10-29 02:47:25, INFO: [epoch 28 it 231000] dloss = 1.3818552494049072, gloss = -0.6916269659996033, prop_real = 0.74836, modes = 25, kl = 0.0007335081118890485
+21-10-29 02:48:51, INFO: experiments/rfgan32_mask/models/model_232000.pt
+21-10-29 02:49:18, INFO: [epoch 29 it 232000] dloss = 1.385270357131958, gloss = -0.6954295039176941, prop_real = 0.7645, modes = 25, kl = 0.0008942424296029005
+21-10-29 02:50:44, INFO: experiments/rfgan32_mask/models/model_233000.pt
+21-10-29 02:51:12, INFO: [epoch 30 it 233000] dloss = 1.3845932483673096, gloss = -0.6942616105079651, prop_real = 0.7542, modes = 25, kl = 0.0009685357023548943
+21-10-29 02:52:38, INFO: experiments/rfgan32_mask/models/model_234000.pt
+21-10-29 02:53:05, INFO: [epoch 31 it 234000] dloss = 1.3807138204574585, gloss = -0.691759467124939, prop_real = 0.75978, modes = 25, kl = 0.0007564250182509052
+21-10-29 02:54:32, INFO: experiments/rfgan32_mask/models/model_235000.pt
+21-10-29 02:54:59, INFO: [epoch 32 it 235000] dloss = 1.3858121633529663, gloss = -0.6929046511650085, prop_real = 0.7635, modes = 25, kl = 0.0007958796085980931
+21-10-29 02:56:25, INFO: experiments/rfgan32_mask/models/model_236000.pt
+21-10-29 02:56:53, INFO: [epoch 33 it 236000] dloss = 1.3839788436889648, gloss = -0.6893556118011475, prop_real = 0.74474, modes = 25, kl = 0.0009091232643291332
+21-10-29 02:58:19, INFO: experiments/rfgan32_mask/models/model_237000.pt
+21-10-29 02:58:46, INFO: [epoch 34 it 237000] dloss = 1.382129430770874, gloss = -0.6944343447685242, prop_real = 0.75556, modes = 25, kl = 0.0008614066759263473
+21-10-29 03:00:11, INFO: experiments/rfgan32_mask/models/model_238000.pt
+21-10-29 03:00:39, INFO: [epoch 35 it 238000] dloss = 1.3821369409561157, gloss = -0.693672776222229, prop_real = 0.74982, modes = 25, kl = 0.0006848316351074667
+21-10-29 03:02:05, INFO: experiments/rfgan32_mask/models/model_239000.pt
+21-10-29 03:02:33, INFO: [epoch 36 it 239000] dloss = 1.3838790655136108, gloss = -0.6872308254241943, prop_real = 0.63448, modes = 25, kl = 0.0009680934023861014
+21-10-29 03:04:00, INFO: experiments/rfgan32_mask/models/model_240000.pt
+21-10-29 03:04:27, INFO: [epoch 37 it 240000] dloss = 1.381292462348938, gloss = -0.6876807808876038, prop_real = 0.75916, modes = 25, kl = 0.0007582470531304606
+21-10-29 03:05:53, INFO: experiments/rfgan32_mask/models/model_241000.pt
+21-10-29 03:06:20, INFO: [epoch 38 it 241000] dloss = 1.3838591575622559, gloss = -0.692098081111908, prop_real = 0.7544, modes = 25, kl = 0.0008500897515744026
+21-10-29 03:07:46, INFO: experiments/rfgan32_mask/models/model_242000.pt
+21-10-29 03:08:14, INFO: [epoch 39 it 242000] dloss = 1.3773736953735352, gloss = -0.6830360293388367, prop_real = 0.74154, modes = 25, kl = 0.0007684076938489532
+21-10-29 03:09:40, INFO: experiments/rfgan32_mask/models/model_243000.pt
+21-10-29 03:10:08, INFO: [epoch 40 it 243000] dloss = 1.3843750953674316, gloss = -0.691447913646698, prop_real = 0.74186, modes = 25, kl = 0.0006490667431848559
+21-10-29 03:11:34, INFO: experiments/rfgan32_mask/models/model_244000.pt
+21-10-29 03:12:01, INFO: [epoch 41 it 244000] dloss = 1.3842917680740356, gloss = -0.6951223611831665, prop_real = 0.76906, modes = 25, kl = 0.000771738855086045
+21-10-29 03:13:27, INFO: experiments/rfgan32_mask/models/model_245000.pt
+21-10-29 03:13:54, INFO: [epoch 42 it 245000] dloss = 1.382502555847168, gloss = -0.6930275559425354, prop_real = 0.76698, modes = 25, kl = 0.0006779737017589996
+21-10-29 03:15:21, INFO: experiments/rfgan32_mask/models/model_246000.pt
+21-10-29 03:15:48, INFO: [epoch 43 it 246000] dloss = 1.3825790882110596, gloss = -0.6941834688186646, prop_real = 0.76326, modes = 25, kl = 0.0006356807762829889
+21-10-29 03:17:15, INFO: experiments/rfgan32_mask/models/model_247000.pt
+21-10-29 03:17:42, INFO: [epoch 44 it 247000] dloss = 1.3830978870391846, gloss = -0.6920979022979736, prop_real = 0.7744, modes = 25, kl = 0.0007297872214174065
+21-10-29 03:19:09, INFO: experiments/rfgan32_mask/models/model_248000.pt
+21-10-29 03:19:36, INFO: [epoch 45 it 248000] dloss = 1.3836369514465332, gloss = -0.6979995369911194, prop_real = 0.74586, modes = 25, kl = 0.0008151488970350304
+21-10-29 03:21:04, INFO: experiments/rfgan32_mask/models/model_249000.pt
+21-10-29 03:21:31, INFO: [epoch 46 it 249000] dloss = 1.3834518194198608, gloss = -0.6941521763801575, prop_real = 0.77456, modes = 25, kl = 0.0007205116133928158
+21-10-29 03:22:59, INFO: experiments/rfgan32_mask/models/model_250000.pt
+21-10-29 03:23:25, INFO: [epoch 47 it 250000] dloss = 1.3841767311096191, gloss = -0.6926672458648682, prop_real = 0.78022, modes = 25, kl = 0.0007668763486188635
+21-10-29 03:24:52, INFO: experiments/rfgan32_mask/models/model_251000.pt
+21-10-29 03:25:20, INFO: [epoch 48 it 251000] dloss = 1.3807940483093262, gloss = -0.6926430463790894, prop_real = 0.72738, modes = 25, kl = 0.000830839635093992
+21-10-29 03:26:46, INFO: experiments/rfgan32_mask/models/model_252000.pt
+21-10-29 03:27:13, INFO: [epoch 49 it 252000] dloss = 1.3845410346984863, gloss = -0.6940997242927551, prop_real = 0.7565, modes = 25, kl = 0.0007069175115754743
+21-10-29 03:28:39, INFO: experiments/rfgan32_mask/models/model_253000.pt
+21-10-29 03:29:07, INFO: [epoch 50 it 253000] dloss = 1.3834290504455566, gloss = -0.6889730095863342, prop_real = 0.76094, modes = 25, kl = 0.000725020908235306
+21-10-29 03:30:32, INFO: experiments/rfgan32_mask/models/model_254000.pt
+21-10-29 03:31:00, INFO: [epoch 51 it 254000] dloss = 1.3860750198364258, gloss = -0.693181037902832, prop_real = 0.76942, modes = 25, kl = 0.000603861849566365
+21-10-29 03:32:26, INFO: experiments/rfgan32_mask/models/model_255000.pt
+21-10-29 03:32:53, INFO: [epoch 52 it 255000] dloss = 1.3862113952636719, gloss = -0.6882227063179016, prop_real = 0.77116, modes = 25, kl = 0.0006592140262394546
+21-10-29 03:34:19, INFO: experiments/rfgan32_mask/models/model_256000.pt
+21-10-29 03:34:47, INFO: [epoch 53 it 256000] dloss = 1.3829621076583862, gloss = -0.6906591653823853, prop_real = 0.73692, modes = 25, kl = 0.0007037794567915365
+21-10-29 03:36:13, INFO: experiments/rfgan32_mask/models/model_257000.pt
+21-10-29 03:36:40, INFO: [epoch 54 it 257000] dloss = 1.3829538822174072, gloss = -0.695483386516571, prop_real = 0.75544, modes = 25, kl = 0.00066547227819955
+21-10-29 03:38:07, INFO: experiments/rfgan32_mask/models/model_258000.pt
+21-10-29 03:38:35, INFO: [epoch 55 it 258000] dloss = 1.384246826171875, gloss = -0.6924203634262085, prop_real = 0.74164, modes = 25, kl = 0.0006449332161346806
+21-10-29 03:40:02, INFO: experiments/rfgan32_mask/models/model_259000.pt
+21-10-29 03:40:29, INFO: [epoch 56 it 259000] dloss = 1.3840328454971313, gloss = -0.6904116868972778, prop_real = 0.78904, modes = 25, kl = 0.0006858218641276653
+21-10-29 03:41:56, INFO: experiments/rfgan32_mask/models/model_260000.pt
+21-10-29 03:42:23, INFO: [epoch 57 it 260000] dloss = 1.382542371749878, gloss = -0.6917890906333923, prop_real = 0.7816, modes = 25, kl = 0.0006522901480726614
+21-10-29 03:43:50, INFO: experiments/rfgan32_mask/models/model_261000.pt
+21-10-29 03:44:18, INFO: [epoch 58 it 261000] dloss = 1.3810393810272217, gloss = -0.6899125576019287, prop_real = 0.7837, modes = 25, kl = 0.0006580330115604108
+21-10-29 03:45:44, INFO: experiments/rfgan32_mask/models/model_262000.pt
+21-10-29 03:46:11, INFO: [epoch 59 it 262000] dloss = 1.3828346729278564, gloss = -0.6936826705932617, prop_real = 0.77978, modes = 25, kl = 0.0005587273129767853
+21-10-29 03:47:38, INFO: experiments/rfgan32_mask/models/model_263000.pt
+21-10-29 03:48:04, INFO: [epoch 60 it 263000] dloss = 1.3820409774780273, gloss = -0.6915638446807861, prop_real = 0.78812, modes = 25, kl = 0.0006257518387061158
+21-10-29 03:49:31, INFO: experiments/rfgan32_mask/models/model_264000.pt
+21-10-29 03:49:58, INFO: [epoch 61 it 264000] dloss = 1.3848085403442383, gloss = -0.6923679709434509, prop_real = 0.79262, modes = 25, kl = 0.00072818389454482
+21-10-29 03:51:25, INFO: experiments/rfgan32_mask/models/model_265000.pt
+21-10-29 03:51:53, INFO: [epoch 62 it 265000] dloss = 1.3855524063110352, gloss = -0.6942881345748901, prop_real = 0.7867, modes = 25, kl = 0.0006975528553193472
+21-10-29 03:53:19, INFO: experiments/rfgan32_mask/models/model_266000.pt
+21-10-29 03:53:46, INFO: [epoch 63 it 266000] dloss = 1.381617546081543, gloss = -0.6893946528434753, prop_real = 0.77628, modes = 25, kl = 0.0006456696127066907
+21-10-29 03:55:11, INFO: experiments/rfgan32_mask/models/model_267000.pt
+21-10-29 03:55:38, INFO: [epoch 64 it 267000] dloss = 1.3832802772521973, gloss = -0.6903220415115356, prop_real = 0.79242, modes = 25, kl = 0.0006656919730512454
+21-10-29 03:57:04, INFO: experiments/rfgan32_mask/models/model_268000.pt
+21-10-29 03:57:31, INFO: [epoch 65 it 268000] dloss = 1.3858695030212402, gloss = -0.695970892906189, prop_real = 0.79434, modes = 25, kl = 0.0006007872777860709
+21-10-29 03:58:58, INFO: experiments/rfgan32_mask/models/model_269000.pt
+21-10-29 03:59:25, INFO: [epoch 66 it 269000] dloss = 1.382965326309204, gloss = -0.6892332434654236, prop_real = 0.79536, modes = 25, kl = 0.0005868953428469431
+21-10-29 04:00:51, INFO: experiments/rfgan32_mask/models/model_270000.pt
+21-10-29 04:01:18, INFO: [epoch 67 it 270000] dloss = 1.3830695152282715, gloss = -0.6911869049072266, prop_real = 0.78044, modes = 25, kl = 0.0006103336851518094
+21-10-29 04:02:45, INFO: experiments/rfgan32_mask/models/model_271000.pt
+21-10-29 04:03:12, INFO: [epoch 68 it 271000] dloss = 1.3881235122680664, gloss = -0.6946537494659424, prop_real = 0.79536, modes = 25, kl = 0.0005626674728904204
+21-10-29 04:04:37, INFO: experiments/rfgan32_mask/models/model_272000.pt
+21-10-29 04:05:04, INFO: [epoch 69 it 272000] dloss = 1.3839735984802246, gloss = -0.6895902752876282, prop_real = 0.79696, modes = 25, kl = 0.0006534812358924816
+21-10-29 04:06:30, INFO: experiments/rfgan32_mask/models/model_273000.pt
+21-10-29 04:06:57, INFO: [epoch 70 it 273000] dloss = 1.384102702140808, gloss = -0.6893652081489563, prop_real = 0.80048, modes = 25, kl = 0.0006101899248563481
+21-10-29 04:08:23, INFO: experiments/rfgan32_mask/models/model_274000.pt
+21-10-29 04:08:50, INFO: [epoch 71 it 274000] dloss = 1.3845751285552979, gloss = -0.691565990447998, prop_real = 0.79172, modes = 25, kl = 0.0006851749978203652
+21-10-29 04:10:16, INFO: experiments/rfgan32_mask/models/model_275000.pt
+21-10-29 04:10:43, INFO: [epoch 72 it 275000] dloss = 1.3853144645690918, gloss = -0.6940096616744995, prop_real = 0.7806, modes = 25, kl = 0.0005711205665822894
+21-10-29 04:12:09, INFO: experiments/rfgan32_mask/models/model_276000.pt
+21-10-29 04:12:37, INFO: [epoch 73 it 276000] dloss = 1.3817236423492432, gloss = -0.6914256811141968, prop_real = 0.79622, modes = 25, kl = 0.0006200351220764194
+21-10-29 04:14:02, INFO: experiments/rfgan32_mask/models/model_277000.pt
+21-10-29 04:14:29, INFO: [epoch 74 it 277000] dloss = 1.381894588470459, gloss = -0.6919213533401489, prop_real = 0.78346, modes = 25, kl = 0.0006872975515670988
+21-10-29 04:15:55, INFO: experiments/rfgan32_mask/models/model_278000.pt
+21-10-29 04:16:22, INFO: [epoch 75 it 278000] dloss = 1.383828043937683, gloss = -0.6888344287872314, prop_real = 0.7741, modes = 25, kl = 0.000710084470290852
+21-10-29 04:17:49, INFO: experiments/rfgan32_mask/models/model_279000.pt
+21-10-29 04:18:16, INFO: [epoch 76 it 279000] dloss = 1.382033109664917, gloss = -0.6888562440872192, prop_real = 0.77266, modes = 25, kl = 0.0006182749362302895
+21-10-29 04:19:43, INFO: experiments/rfgan32_mask/models/model_280000.pt
+21-10-29 04:20:10, INFO: [epoch 77 it 280000] dloss = 1.3836042881011963, gloss = -0.693477988243103, prop_real = 0.7981, modes = 25, kl = 0.0006710753725111989
+21-10-29 04:21:37, INFO: experiments/rfgan32_mask/models/model_281000.pt
+21-10-29 04:22:04, INFO: [epoch 78 it 281000] dloss = 1.382264256477356, gloss = -0.6914941072463989, prop_real = 0.7772, modes = 25, kl = 0.0006000612176804421
+21-10-29 04:23:31, INFO: experiments/rfgan32_mask/models/model_282000.pt
+21-10-29 04:23:58, INFO: [epoch 79 it 282000] dloss = 1.3826594352722168, gloss = -0.6926171779632568, prop_real = 0.76892, modes = 25, kl = 0.00066083921346847
+21-10-29 04:25:25, INFO: experiments/rfgan32_mask/models/model_283000.pt
+21-10-29 04:25:52, INFO: [epoch 80 it 283000] dloss = 1.384164571762085, gloss = -0.6918752789497375, prop_real = 0.78942, modes = 25, kl = 0.0006243140696091192
+21-10-29 04:27:19, INFO: experiments/rfgan32_mask/models/model_284000.pt
+21-10-29 04:27:46, INFO: [epoch 81 it 284000] dloss = 1.3867738246917725, gloss = -0.6957984566688538, prop_real = 0.7985, modes = 25, kl = 0.0006805909161590967
+21-10-29 04:29:14, INFO: experiments/rfgan32_mask/models/model_285000.pt
+21-10-29 04:29:41, INFO: [epoch 82 it 285000] dloss = 1.3824973106384277, gloss = -0.6965344548225403, prop_real = 0.80522, modes = 25, kl = 0.0007239882772969021
+21-10-29 04:31:08, INFO: experiments/rfgan32_mask/models/model_286000.pt
+21-10-29 04:31:35, INFO: [epoch 83 it 286000] dloss = 1.3845864534378052, gloss = -0.6955456137657166, prop_real = 0.74222, modes = 25, kl = 0.0006988702383571299
+21-10-29 04:33:03, INFO: experiments/rfgan32_mask/models/model_287000.pt
+21-10-29 04:33:30, INFO: [epoch 84 it 287000] dloss = 1.386287808418274, gloss = -0.691228449344635, prop_real = 0.78928, modes = 25, kl = 0.0007274355112094025
+21-10-29 04:34:59, INFO: experiments/rfgan32_mask/models/model_288000.pt
+21-10-29 04:35:26, INFO: [epoch 85 it 288000] dloss = 1.3825256824493408, gloss = -0.6942269802093506, prop_real = 0.79382, modes = 25, kl = 0.0006139347225363871
+21-10-29 04:36:53, INFO: experiments/rfgan32_mask/models/model_289000.pt
+21-10-29 04:37:20, INFO: [epoch 86 it 289000] dloss = 1.384810209274292, gloss = -0.692278265953064, prop_real = 0.79704, modes = 25, kl = 0.0007249385883950007
+21-10-29 04:38:46, INFO: experiments/rfgan32_mask/models/model_290000.pt
+21-10-29 04:39:14, INFO: [epoch 87 it 290000] dloss = 1.383032202720642, gloss = -0.6916455626487732, prop_real = 0.80178, modes = 25, kl = 0.0005580498397443354
+21-10-29 04:40:41, INFO: experiments/rfgan32_mask/models/model_291000.pt
+21-10-29 04:41:08, INFO: [epoch 88 it 291000] dloss = 1.3815820217132568, gloss = -0.689849853515625, prop_real = 0.80592, modes = 25, kl = 0.0005400959053137998
+21-10-29 04:42:34, INFO: experiments/rfgan32_mask/models/model_292000.pt
+21-10-29 04:43:01, INFO: [epoch 89 it 292000] dloss = 1.3822237253189087, gloss = -0.6909613013267517, prop_real = 0.78606, modes = 25, kl = 0.0006450629631128259
+21-10-29 04:44:27, INFO: experiments/rfgan32_mask/models/model_293000.pt
+21-10-29 04:44:54, INFO: [epoch 90 it 293000] dloss = 1.3878166675567627, gloss = -0.6971210837364197, prop_real = 0.78834, modes = 25, kl = 0.0006347035520624937
+21-10-29 04:46:21, INFO: experiments/rfgan32_mask/models/model_294000.pt
+21-10-29 04:46:48, INFO: [epoch 91 it 294000] dloss = 1.3821682929992676, gloss = -0.6881664991378784, prop_real = 0.72192, modes = 25, kl = 0.0005249056684200149
+21-10-29 04:48:15, INFO: experiments/rfgan32_mask/models/model_295000.pt
+21-10-29 04:48:42, INFO: [epoch 92 it 295000] dloss = 1.3852605819702148, gloss = -0.6924951076507568, prop_real = 0.81226, modes = 25, kl = 0.0005445149865412168
+21-10-29 04:50:09, INFO: experiments/rfgan32_mask/models/model_296000.pt
+21-10-29 04:50:36, INFO: [epoch 93 it 296000] dloss = 1.3801172971725464, gloss = -0.6899245977401733, prop_real = 0.78546, modes = 25, kl = 0.000628605997645829
+21-10-29 04:52:03, INFO: experiments/rfgan32_mask/models/model_297000.pt
+21-10-29 04:52:30, INFO: [epoch 94 it 297000] dloss = 1.3853002786636353, gloss = -0.6934196352958679, prop_real = 0.78764, modes = 25, kl = 0.0006825073965547792
+21-10-29 04:53:57, INFO: experiments/rfgan32_mask/models/model_298000.pt
+21-10-29 04:54:24, INFO: [epoch 95 it 298000] dloss = 1.384759545326233, gloss = -0.6925103068351746, prop_real = 0.80538, modes = 25, kl = 0.0005796801290114744
+21-10-29 04:55:52, INFO: experiments/rfgan32_mask/models/model_299000.pt
+21-10-29 04:56:19, INFO: [epoch 96 it 299000] dloss = 1.3841049671173096, gloss = -0.6945111155509949, prop_real = 0.77114, modes = 25, kl = 0.0006332829504193797
+21-10-29 04:57:45, INFO: experiments/rfgan32_mask/models/model_300000.pt
+21-10-29 04:58:12, INFO: [epoch 97 it 300000] dloss = 1.3842217922210693, gloss = -0.6931208372116089, prop_real = 0.79366, modes = 25, kl = 0.0005605512068695376
+21-10-29 04:59:39, INFO: experiments/rfgan32_mask/models/model_301000.pt
+21-10-29 05:00:06, INFO: [epoch 98 it 301000] dloss = 1.3836393356323242, gloss = -0.6872991323471069, prop_real = 0.8099, modes = 25, kl = 0.0006165820664006179
+21-10-29 05:01:32, INFO: experiments/rfgan32_mask/models/model_302000.pt
+21-10-29 05:01:59, INFO: [epoch 99 it 302000] dloss = 1.3843456506729126, gloss = -0.6931235194206238, prop_real = 0.80894, modes = 25, kl = 0.0006143111887448132
+21-10-29 05:03:25, INFO: experiments/rfgan32_mask/models/model_303000.pt
+21-10-29 05:03:52, INFO: [epoch 100 it 303000] dloss = 1.3884832859039307, gloss = -0.6915377378463745, prop_real = 0.79352, modes = 25, kl = 0.0006522559192248202
+21-10-29 05:05:15, INFO: experiments/rfgan32_mask/models/model_304000.pt
+21-10-29 05:05:42, INFO: [epoch 101 it 304000] dloss = 1.385593295097351, gloss = -0.6917399168014526, prop_real = 0.81098, modes = 25, kl = 0.000603386100956663
+21-10-29 05:07:05, INFO: experiments/rfgan32_mask/models/model_305000.pt
+21-10-29 05:07:32, INFO: [epoch 102 it 305000] dloss = 1.3846445083618164, gloss = -0.689716100692749, prop_real = 0.80522, modes = 25, kl = 0.0005998071893984261
+21-10-29 05:08:57, INFO: experiments/rfgan32_mask/models/model_306000.pt
+21-10-29 05:09:24, INFO: [epoch 103 it 306000] dloss = 1.3874963521957397, gloss = -0.6938346028327942, prop_real = 0.80262, modes = 25, kl = 0.000741943684836861
+21-10-29 05:10:46, INFO: experiments/rfgan32_mask/models/model_307000.pt
+21-10-29 05:11:13, INFO: [epoch 104 it 307000] dloss = 1.3796803951263428, gloss = -0.6889999508857727, prop_real = 0.80912, modes = 25, kl = 0.0006816533253494244
+21-10-29 05:12:34, INFO: experiments/rfgan32_mask/models/model_308000.pt
+21-10-29 05:13:01, INFO: [epoch 105 it 308000] dloss = 1.3849215507507324, gloss = -0.6942428946495056, prop_real = 0.81422, modes = 25, kl = 0.000604841940666319
+21-10-29 05:14:23, INFO: experiments/rfgan32_mask/models/model_309000.pt
+21-10-29 05:14:50, INFO: [epoch 106 it 309000] dloss = 1.3824429512023926, gloss = -0.6903886198997498, prop_real = 0.80082, modes = 25, kl = 0.0005220185811318288
+21-10-29 05:16:11, INFO: experiments/rfgan32_mask/models/model_310000.pt
+21-10-29 05:16:39, INFO: [epoch 107 it 310000] dloss = 1.383202314376831, gloss = -0.6904882788658142, prop_real = 0.7318, modes = 25, kl = 0.0005436195844713985
+21-10-29 05:18:00, INFO: experiments/rfgan32_mask/models/model_311000.pt
+21-10-29 05:18:27, INFO: [epoch 108 it 311000] dloss = 1.3853507041931152, gloss = -0.6940529942512512, prop_real = 0.80834, modes = 25, kl = 0.0005401006352239476
+21-10-29 05:19:51, INFO: experiments/rfgan32_mask/models/model_312000.pt
+21-10-29 05:20:18, INFO: [epoch 109 it 312000] dloss = 1.3845665454864502, gloss = -0.6943394541740417, prop_real = 0.81504, modes = 25, kl = 0.00048186582983980575
+21-10-29 05:21:43, INFO: experiments/rfgan32_mask/models/model_313000.pt
+21-10-29 05:22:10, INFO: [epoch 110 it 313000] dloss = 1.3857617378234863, gloss = -0.6922482252120972, prop_real = 0.81386, modes = 25, kl = 0.0005402519978262663
+21-10-29 05:23:33, INFO: experiments/rfgan32_mask/models/model_314000.pt
+21-10-29 05:24:01, INFO: [epoch 111 it 314000] dloss = 1.384831428527832, gloss = -0.6942659616470337, prop_real = 0.81186, modes = 25, kl = 0.0005892100745477497
+21-10-29 05:25:28, INFO: experiments/rfgan32_mask/models/model_315000.pt
+21-10-29 05:25:55, INFO: [epoch 112 it 315000] dloss = 1.3837112188339233, gloss = -0.6914839148521423, prop_real = 0.79344, modes = 25, kl = 0.0005082156557304031
+21-10-29 05:27:22, INFO: experiments/rfgan32_mask/models/model_316000.pt
+21-10-29 05:27:49, INFO: [epoch 113 it 316000] dloss = 1.3858866691589355, gloss = -0.6934155225753784, prop_real = 0.8019, modes = 25, kl = 0.0005584680520225101
+21-10-29 05:29:18, INFO: experiments/rfgan32_mask/models/model_317000.pt
+21-10-29 05:29:46, INFO: [epoch 114 it 317000] dloss = 1.3832770586013794, gloss = -0.6902552843093872, prop_real = 0.81646, modes = 25, kl = 0.0005635759080285588
+21-10-29 05:31:13, INFO: experiments/rfgan32_mask/models/model_318000.pt
+21-10-29 05:31:41, INFO: [epoch 115 it 318000] dloss = 1.383476972579956, gloss = -0.6906911134719849, prop_real = 0.809, modes = 25, kl = 0.0005554694171283228
+21-10-29 05:33:08, INFO: experiments/rfgan32_mask/models/model_319000.pt
+21-10-29 05:33:35, INFO: [epoch 116 it 319000] dloss = 1.3864352703094482, gloss = -0.6958943605422974, prop_real = 0.8179, modes = 25, kl = 0.00048156251878610007
+21-10-29 05:35:03, INFO: experiments/rfgan32_mask/models/model_320000.pt
+21-10-29 05:35:30, INFO: [epoch 117 it 320000] dloss = 1.3850629329681396, gloss = -0.6934736967086792, prop_real = 0.80948, modes = 25, kl = 0.0004549244209012828
+21-10-29 05:36:57, INFO: experiments/rfgan32_mask/models/model_321000.pt
+21-10-29 05:37:24, INFO: [epoch 118 it 321000] dloss = 1.3860629796981812, gloss = -0.6925167441368103, prop_real = 0.81904, modes = 25, kl = 0.0005553923393867616
+21-10-29 05:38:51, INFO: experiments/rfgan32_mask/models/model_322000.pt
+21-10-29 05:39:19, INFO: [epoch 119 it 322000] dloss = 1.3861544132232666, gloss = -0.6939747929573059, prop_real = 0.81616, modes = 25, kl = 0.0005111938848466585
+21-10-29 05:40:44, INFO: experiments/rfgan32_mask/models/model_323000.pt
+21-10-29 05:41:12, INFO: [epoch 120 it 323000] dloss = 1.3838119506835938, gloss = -0.6945427656173706, prop_real = 0.80536, modes = 25, kl = 0.00048396066556008043
+21-10-29 05:42:35, INFO: experiments/rfgan32_mask/models/model_324000.pt
+21-10-29 05:43:03, INFO: [epoch 121 it 324000] dloss = 1.3841841220855713, gloss = -0.6919289827346802, prop_real = 0.81376, modes = 25, kl = 0.00045924126455930956
+21-10-29 05:44:27, INFO: experiments/rfgan32_mask/models/model_325000.pt
+21-10-29 05:44:54, INFO: [epoch 122 it 325000] dloss = 1.3870562314987183, gloss = -0.6955381035804749, prop_real = 0.81868, modes = 25, kl = 0.0005948273679233676
+21-10-29 05:46:19, INFO: experiments/rfgan32_mask/models/model_326000.pt
+21-10-29 05:46:46, INFO: [epoch 123 it 326000] dloss = 1.3836909532546997, gloss = -0.6901625394821167, prop_real = 0.81296, modes = 25, kl = 0.0007031849564156291
+21-10-29 05:48:11, INFO: experiments/rfgan32_mask/models/model_327000.pt
+21-10-29 05:48:39, INFO: [epoch 124 it 327000] dloss = 1.3864825963974, gloss = -0.690190851688385, prop_real = 0.77602, modes = 25, kl = 0.0006091621831429517
+21-10-29 05:50:03, INFO: experiments/rfgan32_mask/models/model_328000.pt
+21-10-29 05:50:30, INFO: [epoch 125 it 328000] dloss = 1.3867127895355225, gloss = -0.6925662159919739, prop_real = 0.8073, modes = 25, kl = 0.0005557708190849098
+21-10-29 05:51:54, INFO: experiments/rfgan32_mask/models/model_329000.pt
+21-10-29 05:52:21, INFO: [epoch 126 it 329000] dloss = 1.3860199451446533, gloss = -0.6923659443855286, prop_real = 0.80084, modes = 25, kl = 0.0006341417852006297
+21-10-29 05:53:47, INFO: experiments/rfgan32_mask/models/model_330000.pt
+21-10-29 05:54:14, INFO: [epoch 127 it 330000] dloss = 1.384463906288147, gloss = -0.6916465759277344, prop_real = 0.80748, modes = 25, kl = 0.0005558239287232721
+21-10-29 05:55:38, INFO: experiments/rfgan32_mask/models/model_331000.pt
+21-10-29 05:56:05, INFO: [epoch 128 it 331000] dloss = 1.3826992511749268, gloss = -0.6941444277763367, prop_real = 0.7789, modes = 25, kl = 0.0006952053493696521
+21-10-29 05:57:31, INFO: experiments/rfgan32_mask/models/model_332000.pt
+21-10-29 05:57:57, INFO: [epoch 129 it 332000] dloss = 1.3826566934585571, gloss = -0.6911122798919678, prop_real = 0.8175, modes = 25, kl = 0.0005738144280094711
+21-10-29 05:59:22, INFO: experiments/rfgan32_mask/models/model_333000.pt
+21-10-29 05:59:49, INFO: [epoch 130 it 333000] dloss = 1.3819031715393066, gloss = -0.6889601945877075, prop_real = 0.80794, modes = 25, kl = 0.0004602228132941327
+21-10-29 06:01:15, INFO: experiments/rfgan32_mask/models/model_334000.pt
+21-10-29 06:01:42, INFO: [epoch 131 it 334000] dloss = 1.383077621459961, gloss = -0.6910116672515869, prop_real = 0.80732, modes = 25, kl = 0.0005274360392023998
+21-10-29 06:03:06, INFO: experiments/rfgan32_mask/models/model_335000.pt
+21-10-29 06:03:33, INFO: [epoch 132 it 335000] dloss = 1.384970784187317, gloss = -0.6915435791015625, prop_real = 0.8171, modes = 25, kl = 0.0005316692483913483
+21-10-29 06:04:58, INFO: experiments/rfgan32_mask/models/model_336000.pt
+21-10-29 06:05:25, INFO: [epoch 133 it 336000] dloss = 1.3853274583816528, gloss = -0.692017674446106, prop_real = 0.82184, modes = 25, kl = 0.0005838345451618344
+21-10-29 06:06:52, INFO: experiments/rfgan32_mask/models/model_337000.pt
+21-10-29 06:07:19, INFO: [epoch 134 it 337000] dloss = 1.3875000476837158, gloss = -0.6952473521232605, prop_real = 0.82904, modes = 25, kl = 0.0006105636105889815
+21-10-29 06:08:45, INFO: experiments/rfgan32_mask/models/model_338000.pt
+21-10-29 06:09:13, INFO: [epoch 135 it 338000] dloss = 1.3851675987243652, gloss = -0.6917761564254761, prop_real = 0.7989, modes = 25, kl = 0.0006228676150675852
+21-10-29 06:10:40, INFO: experiments/rfgan32_mask/models/model_339000.pt
+21-10-29 06:11:07, INFO: [epoch 136 it 339000] dloss = 1.3844863176345825, gloss = -0.6948087215423584, prop_real = 0.8273, modes = 25, kl = 0.0006394544856069829
+21-10-29 06:12:34, INFO: experiments/rfgan32_mask/models/model_340000.pt
+21-10-29 06:13:00, INFO: [epoch 137 it 340000] dloss = 1.3882310390472412, gloss = -0.6950700283050537, prop_real = 0.8147, modes = 25, kl = 0.0006621633697584993
+21-10-29 06:14:28, INFO: experiments/rfgan32_mask/models/model_341000.pt
+21-10-29 06:14:55, INFO: [epoch 138 it 341000] dloss = 1.3849869966506958, gloss = -0.6925621628761292, prop_real = 0.81228, modes = 25, kl = 0.0006767019935537059
+21-10-29 06:16:23, INFO: experiments/rfgan32_mask/models/model_342000.pt
+21-10-29 06:16:50, INFO: [epoch 139 it 342000] dloss = 1.383959174156189, gloss = -0.6913754343986511, prop_real = 0.82644, modes = 25, kl = 0.0005643295717044955
+21-10-29 06:18:17, INFO: experiments/rfgan32_mask/models/model_343000.pt
+21-10-29 06:18:44, INFO: [epoch 140 it 343000] dloss = 1.3844783306121826, gloss = -0.692493200302124, prop_real = 0.82744, modes = 25, kl = 0.0005765936734592101
+21-10-29 06:20:12, INFO: experiments/rfgan32_mask/models/model_344000.pt
+21-10-29 06:20:38, INFO: [epoch 141 it 344000] dloss = 1.384671926498413, gloss = -0.6952627897262573, prop_real = 0.81066, modes = 25, kl = 0.0005077544826789042
+21-10-29 06:22:06, INFO: experiments/rfgan32_mask/models/model_345000.pt
+21-10-29 06:22:33, INFO: [epoch 142 it 345000] dloss = 1.3824971914291382, gloss = -0.6925404071807861, prop_real = 0.81938, modes = 25, kl = 0.0005484760331922718
+21-10-29 06:24:01, INFO: experiments/rfgan32_mask/models/model_346000.pt
+21-10-29 06:24:28, INFO: [epoch 143 it 346000] dloss = 1.384453535079956, gloss = -0.6923742294311523, prop_real = 0.79304, modes = 25, kl = 0.000583276454617131
+21-10-29 06:25:55, INFO: experiments/rfgan32_mask/models/model_347000.pt
+21-10-29 06:26:22, INFO: [epoch 144 it 347000] dloss = 1.3843555450439453, gloss = -0.6927907466888428, prop_real = 0.80566, modes = 25, kl = 0.0006097056280728156
+21-10-29 06:27:50, INFO: experiments/rfgan32_mask/models/model_348000.pt
+21-10-29 06:28:17, INFO: [epoch 145 it 348000] dloss = 1.3816242218017578, gloss = -0.6937398910522461, prop_real = 0.81466, modes = 25, kl = 0.0005999244079448855
+21-10-29 06:29:44, INFO: experiments/rfgan32_mask/models/model_349000.pt
+21-10-29 06:30:11, INFO: [epoch 146 it 349000] dloss = 1.3840951919555664, gloss = -0.6939127445220947, prop_real = 0.82756, modes = 25, kl = 0.0006078259447081067
+21-10-29 06:31:38, INFO: experiments/rfgan32_mask/models/model_350000.pt
+21-10-29 06:32:06, INFO: [epoch 147 it 350000] dloss = 1.3806418180465698, gloss = -0.687053382396698, prop_real = 0.74262, modes = 25, kl = 0.0006299219589747723
+21-10-29 06:33:33, INFO: experiments/rfgan32_mask/models/model_351000.pt
+21-10-29 06:34:00, INFO: [epoch 148 it 351000] dloss = 1.3820011615753174, gloss = -0.6894227266311646, prop_real = 0.81328, modes = 25, kl = 0.0006716707944604695
+21-10-29 06:35:27, INFO: experiments/rfgan32_mask/models/model_352000.pt
+21-10-29 06:35:54, INFO: [epoch 149 it 352000] dloss = 1.3852167129516602, gloss = -0.6898022294044495, prop_real = 0.80156, modes = 25, kl = 0.0006132014737864446
+21-10-29 06:37:22, INFO: experiments/rfgan32_mask/models/model_353000.pt
+21-10-29 06:37:49, INFO: [epoch 150 it 353000] dloss = 1.3862090110778809, gloss = -0.6962839961051941, prop_real = 0.83122, modes = 25, kl = 0.0007062022911052855
+21-10-29 06:39:16, INFO: experiments/rfgan32_mask/models/model_354000.pt
+21-10-29 06:39:43, INFO: [epoch 151 it 354000] dloss = 1.382947564125061, gloss = -0.6911400556564331, prop_real = 0.83514, modes = 25, kl = 0.0006068695708839923
+21-10-29 06:41:10, INFO: experiments/rfgan32_mask/models/model_355000.pt
+21-10-29 06:41:36, INFO: [epoch 152 it 355000] dloss = 1.3815486431121826, gloss = -0.6925051212310791, prop_real = 0.82596, modes = 25, kl = 0.0005754298915752801
+21-10-29 06:43:04, INFO: experiments/rfgan32_mask/models/model_356000.pt
+21-10-29 06:43:31, INFO: [epoch 153 it 356000] dloss = 1.3809159994125366, gloss = -0.6930405497550964, prop_real = 0.7978, modes = 25, kl = 0.0006595134544171554
+21-10-29 06:44:58, INFO: experiments/rfgan32_mask/models/model_357000.pt
+21-10-29 06:45:25, INFO: [epoch 154 it 357000] dloss = 1.38270902633667, gloss = -0.691257894039154, prop_real = 0.83064, modes = 25, kl = 0.0005500967801716783
+21-10-29 06:46:52, INFO: experiments/rfgan32_mask/models/model_358000.pt
+21-10-29 06:47:19, INFO: [epoch 155 it 358000] dloss = 1.3825465440750122, gloss = -0.6914411783218384, prop_real = 0.82348, modes = 25, kl = 0.0005928493068489402
+21-10-29 06:48:46, INFO: experiments/rfgan32_mask/models/model_359000.pt
+21-10-29 06:49:13, INFO: [epoch 156 it 359000] dloss = 1.3880565166473389, gloss = -0.6922415494918823, prop_real = 0.77624, modes = 25, kl = 0.0005193742170841685
+21-10-29 06:50:40, INFO: experiments/rfgan32_mask/models/model_360000.pt
+21-10-29 06:51:07, INFO: [epoch 157 it 360000] dloss = 1.385765552520752, gloss = -0.6957547068595886, prop_real = 0.83412, modes = 25, kl = 0.0006156300328628182
+21-10-29 06:52:34, INFO: experiments/rfgan32_mask/models/model_361000.pt
+21-10-29 06:53:01, INFO: [epoch 158 it 361000] dloss = 1.382749080657959, gloss = -0.6898311972618103, prop_real = 0.82118, modes = 25, kl = 0.0005802526066360561
+21-10-29 06:54:28, INFO: experiments/rfgan32_mask/models/model_362000.pt
+21-10-29 06:54:56, INFO: [epoch 159 it 362000] dloss = 1.375762701034546, gloss = -0.6855943202972412, prop_real = 0.64406, modes = 25, kl = 0.0005320202338639453
+21-10-29 06:56:23, INFO: experiments/rfgan32_mask/models/model_363000.pt
+21-10-29 06:56:50, INFO: [epoch 160 it 363000] dloss = 1.3826892375946045, gloss = -0.6908164620399475, prop_real = 0.82934, modes = 25, kl = 0.0006464545012627634
+21-10-29 06:58:18, INFO: experiments/rfgan32_mask/models/model_364000.pt
+21-10-29 06:58:44, INFO: [epoch 161 it 364000] dloss = 1.385195016860962, gloss = -0.6928901672363281, prop_real = 0.82556, modes = 25, kl = 0.0005910725618476307
+21-10-29 07:00:12, INFO: experiments/rfgan32_mask/models/model_365000.pt
+21-10-29 07:00:39, INFO: [epoch 162 it 365000] dloss = 1.3840608596801758, gloss = -0.691029965877533, prop_real = 0.82904, modes = 25, kl = 0.0005754921016173154
+21-10-29 07:02:07, INFO: experiments/rfgan32_mask/models/model_366000.pt
+21-10-29 07:02:33, INFO: [epoch 163 it 366000] dloss = 1.382779598236084, gloss = -0.6919540166854858, prop_real = 0.8229, modes = 25, kl = 0.0005476224782401458
+21-10-29 07:04:00, INFO: experiments/rfgan32_mask/models/model_367000.pt
+21-10-29 07:04:27, INFO: [epoch 164 it 367000] dloss = 1.382401704788208, gloss = -0.690922200679779, prop_real = 0.82528, modes = 25, kl = 0.0005832617987019005
+21-10-29 07:05:55, INFO: experiments/rfgan32_mask/models/model_368000.pt
+21-10-29 07:06:21, INFO: [epoch 165 it 368000] dloss = 1.381012201309204, gloss = -0.69075608253479, prop_real = 0.80734, modes = 25, kl = 0.0004576220740030042
+21-10-29 07:07:50, INFO: experiments/rfgan32_mask/models/model_369000.pt
+21-10-29 07:08:17, INFO: [epoch 166 it 369000] dloss = 1.3820475339889526, gloss = -0.6911550760269165, prop_real = 0.81904, modes = 25, kl = 0.0006403477052246258
+21-10-29 07:09:45, INFO: experiments/rfgan32_mask/models/model_370000.pt
+21-10-29 07:10:12, INFO: [epoch 167 it 370000] dloss = 1.3831477165222168, gloss = -0.6915963888168335, prop_real = 0.81776, modes = 25, kl = 0.0006138128393121855
+21-10-29 07:11:40, INFO: experiments/rfgan32_mask/models/model_371000.pt
+21-10-29 07:12:07, INFO: [epoch 168 it 371000] dloss = 1.3857908248901367, gloss = -0.6925665736198425, prop_real = 0.8002, modes = 25, kl = 0.0006084881491491326
+21-10-29 07:13:36, INFO: experiments/rfgan32_mask/models/model_372000.pt
+21-10-29 07:14:02, INFO: [epoch 169 it 372000] dloss = 1.3848001956939697, gloss = -0.6924351453781128, prop_real = 0.82848, modes = 25, kl = 0.0005284233859346446
+21-10-29 07:15:30, INFO: experiments/rfgan32_mask/models/model_373000.pt
+21-10-29 07:15:57, INFO: [epoch 170 it 373000] dloss = 1.3833427429199219, gloss = -0.6922566890716553, prop_real = 0.83584, modes = 25, kl = 0.0005963649534244028
+21-10-29 07:17:25, INFO: experiments/rfgan32_mask/models/model_374000.pt
+21-10-29 07:17:51, INFO: [epoch 171 it 374000] dloss = 1.385312795639038, gloss = -0.6931691765785217, prop_real = 0.81172, modes = 25, kl = 0.0005868944027917706
+21-10-29 07:19:19, INFO: experiments/rfgan32_mask/models/model_375000.pt
+21-10-29 07:19:46, INFO: [epoch 172 it 375000] dloss = 1.3858202695846558, gloss = -0.6922509074211121, prop_real = 0.81922, modes = 25, kl = 0.0005669976421877592
+21-10-29 07:21:14, INFO: experiments/rfgan32_mask/models/model_376000.pt
+21-10-29 07:21:40, INFO: [epoch 173 it 376000] dloss = 1.3848466873168945, gloss = -0.6923167109489441, prop_real = 0.8331, modes = 25, kl = 0.0006424764926755644
+21-10-29 07:23:09, INFO: experiments/rfgan32_mask/models/model_377000.pt
+21-10-29 07:23:35, INFO: [epoch 174 it 377000] dloss = 1.3826875686645508, gloss = -0.6939533948898315, prop_real = 0.83684, modes = 25, kl = 0.0006349458331093454
+21-10-29 07:25:03, INFO: experiments/rfgan32_mask/models/model_378000.pt
+21-10-29 07:25:29, INFO: [epoch 175 it 378000] dloss = 1.382148265838623, gloss = -0.6913824081420898, prop_real = 0.83418, modes = 25, kl = 0.0006392773623610333
+21-10-29 07:26:57, INFO: experiments/rfgan32_mask/models/model_379000.pt
+21-10-29 07:27:24, INFO: [epoch 176 it 379000] dloss = 1.3829281330108643, gloss = -0.6889430284500122, prop_real = 0.82572, modes = 25, kl = 0.0005950195182776435
+21-10-29 07:28:52, INFO: experiments/rfgan32_mask/models/model_380000.pt
+21-10-29 07:29:18, INFO: [epoch 177 it 380000] dloss = 1.3852810859680176, gloss = -0.6940950751304626, prop_real = 0.84166, modes = 25, kl = 0.0006347195091958323
+21-10-29 07:30:46, INFO: experiments/rfgan32_mask/models/model_381000.pt
+21-10-29 07:31:13, INFO: [epoch 178 it 381000] dloss = 1.387054681777954, gloss = -0.695311427116394, prop_real = 0.80378, modes = 25, kl = 0.0006161685244606299
+21-10-29 07:32:40, INFO: experiments/rfgan32_mask/models/model_382000.pt
+21-10-29 07:33:07, INFO: [epoch 179 it 382000] dloss = 1.3863765001296997, gloss = -0.6913119554519653, prop_real = 0.7528, modes = 25, kl = 0.0006133571712809923
+21-10-29 07:34:36, INFO: experiments/rfgan32_mask/models/model_383000.pt
+21-10-29 07:35:02, INFO: [epoch 180 it 383000] dloss = 1.3830816745758057, gloss = -0.6946520209312439, prop_real = 0.82602, modes = 25, kl = 0.0005401467554017366
+21-10-29 07:36:30, INFO: experiments/rfgan32_mask/models/model_384000.pt
+21-10-29 07:36:57, INFO: [epoch 181 it 384000] dloss = 1.3820745944976807, gloss = -0.6897961497306824, prop_real = 0.76386, modes = 25, kl = 0.0007578320546209291
+21-10-29 07:38:25, INFO: experiments/rfgan32_mask/models/model_385000.pt
+21-10-29 07:38:51, INFO: [epoch 182 it 385000] dloss = 1.3829996585845947, gloss = -0.6916360259056091, prop_real = 0.8308, modes = 25, kl = 0.0006128084019711254
+21-10-29 07:40:19, INFO: experiments/rfgan32_mask/models/model_386000.pt
+21-10-29 07:40:45, INFO: [epoch 183 it 386000] dloss = 1.385168194770813, gloss = -0.6939005851745605, prop_real = 0.82914, modes = 25, kl = 0.0006300379474956899
+21-10-29 07:42:13, INFO: experiments/rfgan32_mask/models/model_387000.pt
+21-10-29 07:42:40, INFO: [epoch 184 it 387000] dloss = 1.384568452835083, gloss = -0.6918115615844727, prop_real = 0.83848, modes = 25, kl = 0.0006468875663378758
+21-10-29 07:44:08, INFO: experiments/rfgan32_mask/models/model_388000.pt
+21-10-29 07:44:34, INFO: [epoch 185 it 388000] dloss = 1.3851592540740967, gloss = -0.6923556327819824, prop_real = 0.83878, modes = 25, kl = 0.0005761060879735081
+21-10-29 07:46:02, INFO: experiments/rfgan32_mask/models/model_389000.pt
+21-10-29 07:46:30, INFO: [epoch 186 it 389000] dloss = 1.386104702949524, gloss = -0.6962700486183167, prop_real = 0.59276, modes = 25, kl = 0.0006430686788314497
+21-10-29 11:05:41, INFO: experiments/rfgan32_mask/models/model_390000.pt
+21-10-29 11:06:08, INFO: [epoch 0 it 390000] dloss = 1.3848614692687988, gloss = -0.691170871257782, prop_real = 0.72554, modes = 25, kl = 0.0011248686578185776
+21-10-29 11:07:32, INFO: experiments/rfgan32_mask/models/model_391000.pt
+21-10-29 11:07:58, INFO: [epoch 1 it 391000] dloss = 1.3837186098098755, gloss = -0.6907589435577393, prop_real = 0.81744, modes = 25, kl = 0.0009284625716133304
+21-10-29 11:09:22, INFO: experiments/rfgan32_mask/models/model_392000.pt
+21-10-29 11:09:48, INFO: [epoch 2 it 392000] dloss = 1.38407301902771, gloss = -0.6907656192779541, prop_real = 0.81724, modes = 25, kl = 0.000990971956562564
+21-10-29 11:11:12, INFO: experiments/rfgan32_mask/models/model_393000.pt
+21-10-29 11:11:37, INFO: [epoch 3 it 393000] dloss = 1.3865948915481567, gloss = -0.6941240429878235, prop_real = 0.84322, modes = 25, kl = 0.0009509031568303409
+21-10-29 11:13:02, INFO: experiments/rfgan32_mask/models/model_394000.pt
+21-10-29 11:13:27, INFO: [epoch 4 it 394000] dloss = 1.3833279609680176, gloss = -0.6925638914108276, prop_real = 0.8309, modes = 25, kl = 0.0008226311171116127
+21-10-29 11:14:53, INFO: experiments/rfgan32_mask/models/model_395000.pt
+21-10-29 11:15:18, INFO: [epoch 5 it 395000] dloss = 1.3864657878875732, gloss = -0.6956814527511597, prop_real = 0.80762, modes = 25, kl = 0.0008650320949225449
+21-10-29 11:16:45, INFO: experiments/rfgan32_mask/models/model_396000.pt
+21-10-29 11:17:10, INFO: [epoch 6 it 396000] dloss = 1.3861607313156128, gloss = -0.6925737857818604, prop_real = 0.84174, modes = 25, kl = 0.0009553290383634738
+21-10-29 11:18:37, INFO: experiments/rfgan32_mask/models/model_397000.pt
+21-10-29 11:19:03, INFO: [epoch 7 it 397000] dloss = 1.3853486776351929, gloss = -0.6921177506446838, prop_real = 0.839, modes = 25, kl = 0.0008019646906514871
+21-10-29 11:20:28, INFO: experiments/rfgan32_mask/models/model_398000.pt
+21-10-29 11:20:54, INFO: [epoch 8 it 398000] dloss = 1.382675051689148, gloss = -0.6924932599067688, prop_real = 0.83786, modes = 25, kl = 0.0008621046486492763
+21-10-29 11:22:19, INFO: experiments/rfgan32_mask/models/model_399000.pt
+21-10-29 11:22:45, INFO: [epoch 9 it 399000] dloss = 1.3849132061004639, gloss = -0.6935720443725586, prop_real = 0.84214, modes = 25, kl = 0.0008824490951485089
+21-10-29 11:24:12, INFO: experiments/rfgan32_mask/models/model_400000.pt
+21-10-29 11:24:38, INFO: [epoch 10 it 400000] dloss = 1.3867170810699463, gloss = -0.6931135654449463, prop_real = 0.83646, modes = 25, kl = 0.0008514290413095347
+21-10-29 11:26:03, INFO: experiments/rfgan32_mask/models/model_401000.pt
+21-10-29 11:26:28, INFO: [epoch 11 it 401000] dloss = 1.3855297565460205, gloss = -0.6945877075195312, prop_real = 0.84028, modes = 25, kl = 0.0008147553105295117
+21-10-29 11:27:54, INFO: experiments/rfgan32_mask/models/model_402000.pt
+21-10-29 11:28:20, INFO: [epoch 12 it 402000] dloss = 1.3840234279632568, gloss = -0.6910691857337952, prop_real = 0.8343, modes = 25, kl = 0.000900349795204863
+21-10-29 11:29:46, INFO: experiments/rfgan32_mask/models/model_403000.pt
+21-10-29 11:30:11, INFO: [epoch 13 it 403000] dloss = 1.3849838972091675, gloss = -0.6908531188964844, prop_real = 0.83716, modes = 25, kl = 0.000937393073892728
+21-10-29 11:31:38, INFO: experiments/rfgan32_mask/models/model_404000.pt
+21-10-29 11:32:03, INFO: [epoch 14 it 404000] dloss = 1.3836026191711426, gloss = -0.688575267791748, prop_real = 0.8378, modes = 25, kl = 0.0009534023680737266
+21-10-29 11:33:31, INFO: experiments/rfgan32_mask/models/model_405000.pt
+21-10-29 11:33:57, INFO: [epoch 15 it 405000] dloss = 1.379706621170044, gloss = -0.689020574092865, prop_real = 0.82484, modes = 25, kl = 0.001019648928884254
+21-10-29 11:35:22, INFO: experiments/rfgan32_mask/models/model_406000.pt
+21-10-29 11:35:48, INFO: [epoch 16 it 406000] dloss = 1.3844510316848755, gloss = -0.6925776600837708, prop_real = 0.84178, modes = 25, kl = 0.0008891173512416104
+21-10-29 11:37:14, INFO: experiments/rfgan32_mask/models/model_407000.pt
+21-10-29 11:37:40, INFO: [epoch 17 it 407000] dloss = 1.3820722103118896, gloss = -0.6897649765014648, prop_real = 0.84064, modes = 25, kl = 0.0009483344270719448
+21-10-29 11:39:05, INFO: experiments/rfgan32_mask/models/model_408000.pt
+21-10-29 11:39:31, INFO: [epoch 18 it 408000] dloss = 1.3877158164978027, gloss = -0.6947108507156372, prop_real = 0.83956, modes = 25, kl = 0.0010273704570471626
+21-10-29 11:40:56, INFO: experiments/rfgan32_mask/models/model_409000.pt
+21-10-29 11:41:22, INFO: [epoch 19 it 409000] dloss = 1.3828749656677246, gloss = -0.6918968558311462, prop_real = 0.8434, modes = 25, kl = 0.0008446320944238875
+21-10-29 11:42:49, INFO: experiments/rfgan32_mask/models/model_410000.pt
+21-10-29 11:43:14, INFO: [epoch 20 it 410000] dloss = 1.3844282627105713, gloss = -0.6913973689079285, prop_real = 0.83028, modes = 25, kl = 0.0009133897988695841
+21-10-29 11:44:40, INFO: experiments/rfgan32_mask/models/model_411000.pt
+21-10-29 11:45:06, INFO: [epoch 21 it 411000] dloss = 1.3836005926132202, gloss = -0.6895838975906372, prop_real = 0.83746, modes = 25, kl = 0.0009403974335801128
+21-10-29 11:46:34, INFO: experiments/rfgan32_mask/models/model_412000.pt
+21-10-29 11:47:00, INFO: [epoch 22 it 412000] dloss = 1.3849663734436035, gloss = -0.6910098195075989, prop_real = 0.80998, modes = 25, kl = 0.0009546042812059098
+21-10-29 11:48:28, INFO: experiments/rfgan32_mask/models/model_413000.pt
+21-10-29 11:48:54, INFO: [epoch 23 it 413000] dloss = 1.3847379684448242, gloss = -0.6936233639717102, prop_real = 0.84702, modes = 25, kl = 0.0009999807741585967
+21-10-29 11:50:20, INFO: experiments/rfgan32_mask/models/model_414000.pt
+21-10-29 11:50:46, INFO: [epoch 24 it 414000] dloss = 1.3852336406707764, gloss = -0.6936059594154358, prop_real = 0.8488, modes = 25, kl = 0.00096589511533817
+21-10-29 11:52:12, INFO: experiments/rfgan32_mask/models/model_415000.pt
+21-10-29 11:52:37, INFO: [epoch 25 it 415000] dloss = 1.3841729164123535, gloss = -0.6915839314460754, prop_real = 0.84088, modes = 25, kl = 0.0007830947039069816
+21-10-29 11:54:03, INFO: experiments/rfgan32_mask/models/model_416000.pt
+21-10-29 11:54:29, INFO: [epoch 26 it 416000] dloss = 1.3846633434295654, gloss = -0.6920588612556458, prop_real = 0.80832, modes = 25, kl = 0.0008917794870153636
+21-10-29 11:55:54, INFO: experiments/rfgan32_mask/models/model_417000.pt
+21-10-29 11:56:20, INFO: [epoch 27 it 417000] dloss = 1.3841133117675781, gloss = -0.6927275061607361, prop_real = 0.85112, modes = 25, kl = 0.0008209753571279655
+21-10-29 11:57:46, INFO: experiments/rfgan32_mask/models/model_418000.pt
+21-10-29 11:58:12, INFO: [epoch 28 it 418000] dloss = 1.3842800855636597, gloss = -0.6952992081642151, prop_real = 0.84336, modes = 25, kl = 0.0008632786031800729
+21-10-29 11:59:39, INFO: experiments/rfgan32_mask/models/model_419000.pt
+21-10-29 12:00:05, INFO: [epoch 29 it 419000] dloss = 1.3869178295135498, gloss = -0.6953573226928711, prop_real = 0.74168, modes = 25, kl = 0.0009019061504710242
+21-10-29 12:01:32, INFO: experiments/rfgan32_mask/models/model_420000.pt
+21-10-29 12:01:58, INFO: [epoch 30 it 420000] dloss = 1.3847744464874268, gloss = -0.6904458403587341, prop_real = 0.84764, modes = 25, kl = 0.0008545074744229092
+21-10-29 12:03:25, INFO: experiments/rfgan32_mask/models/model_421000.pt
+21-10-29 12:03:51, INFO: [epoch 31 it 421000] dloss = 1.385688304901123, gloss = -0.6957250833511353, prop_real = 0.83846, modes = 25, kl = 0.0007811069329317776
+21-10-29 12:05:16, INFO: experiments/rfgan32_mask/models/model_422000.pt
+21-10-29 12:05:43, INFO: [epoch 32 it 422000] dloss = 1.3800023794174194, gloss = -0.6883694529533386, prop_real = 0.72716, modes = 25, kl = 0.0008299763999365574
+21-10-29 12:07:09, INFO: experiments/rfgan32_mask/models/model_423000.pt
+21-10-29 12:07:35, INFO: [epoch 33 it 423000] dloss = 1.3838109970092773, gloss = -0.6934296488761902, prop_real = 0.8362, modes = 25, kl = 0.0010164768178150332
+21-10-29 12:09:01, INFO: experiments/rfgan32_mask/models/model_424000.pt
+21-10-29 12:09:27, INFO: [epoch 34 it 424000] dloss = 1.384317398071289, gloss = -0.6927728652954102, prop_real = 0.8205, modes = 25, kl = 0.0010193518313346436
+21-10-29 12:10:54, INFO: experiments/rfgan32_mask/models/model_425000.pt
+21-10-29 12:11:19, INFO: [epoch 35 it 425000] dloss = 1.3848766088485718, gloss = -0.6928951740264893, prop_real = 0.8102, modes = 25, kl = 0.0008801159423946499
+21-10-29 12:12:45, INFO: experiments/rfgan32_mask/models/model_426000.pt
+21-10-29 12:13:11, INFO: [epoch 36 it 426000] dloss = 1.3839893341064453, gloss = -0.6961623430252075, prop_real = 0.8175, modes = 25, kl = 0.0009743731068746068
+21-10-29 12:14:38, INFO: experiments/rfgan32_mask/models/model_427000.pt
+21-10-29 12:15:03, INFO: [epoch 37 it 427000] dloss = 1.3839683532714844, gloss = -0.6921449303627014, prop_real = 0.8485, modes = 25, kl = 0.0009594128033932449
+21-10-29 12:16:29, INFO: experiments/rfgan32_mask/models/model_428000.pt
+21-10-29 12:16:55, INFO: [epoch 38 it 428000] dloss = 1.385300874710083, gloss = -0.6921768188476562, prop_real = 0.83216, modes = 25, kl = 0.0009512060193917998
+21-10-29 12:18:21, INFO: experiments/rfgan32_mask/models/model_429000.pt
+21-10-29 12:18:47, INFO: [epoch 39 it 429000] dloss = 1.381121039390564, gloss = -0.6911603212356567, prop_real = 0.84082, modes = 25, kl = 0.001008206683265688
+21-10-29 12:20:13, INFO: experiments/rfgan32_mask/models/model_430000.pt
+21-10-29 12:20:38, INFO: [epoch 40 it 430000] dloss = 1.3845241069793701, gloss = -0.6946079730987549, prop_real = 0.85038, modes = 25, kl = 0.0008441137912679772
+21-10-29 12:22:04, INFO: experiments/rfgan32_mask/models/model_431000.pt
+21-10-29 12:22:30, INFO: [epoch 41 it 431000] dloss = 1.3829628229141235, gloss = -0.6936578154563904, prop_real = 0.8407, modes = 25, kl = 0.0010411460943425986
+21-10-29 12:23:57, INFO: experiments/rfgan32_mask/models/model_432000.pt
+21-10-29 12:24:23, INFO: [epoch 42 it 432000] dloss = 1.3842265605926514, gloss = -0.6906144618988037, prop_real = 0.83284, modes = 25, kl = 0.000992882630587702
+21-10-29 12:25:51, INFO: experiments/rfgan32_mask/models/model_433000.pt
+21-10-29 12:26:17, INFO: [epoch 43 it 433000] dloss = 1.3851875066757202, gloss = -0.6923283338546753, prop_real = 0.83204, modes = 25, kl = 0.0009416933887195094
+21-10-29 12:27:43, INFO: experiments/rfgan32_mask/models/model_434000.pt
+21-10-29 12:28:08, INFO: [epoch 44 it 434000] dloss = 1.3824468851089478, gloss = -0.6913291811943054, prop_real = 0.84092, modes = 25, kl = 0.0009742599679109232
+21-10-29 12:29:35, INFO: experiments/rfgan32_mask/models/model_435000.pt
+21-10-29 12:30:01, INFO: [epoch 45 it 435000] dloss = 1.3837965726852417, gloss = -0.6941097974777222, prop_real = 0.84786, modes = 25, kl = 0.0009677508873452139
+21-10-29 12:31:27, INFO: experiments/rfgan32_mask/models/model_436000.pt
+21-10-29 12:31:53, INFO: [epoch 46 it 436000] dloss = 1.3838376998901367, gloss = -0.6914457678794861, prop_real = 0.84102, modes = 25, kl = 0.000976190802493665
+21-10-29 12:33:20, INFO: experiments/rfgan32_mask/models/model_437000.pt
+21-10-29 12:33:46, INFO: [epoch 47 it 437000] dloss = 1.385058879852295, gloss = -0.6927818059921265, prop_real = 0.85034, modes = 25, kl = 0.0010284118263935217
+21-10-29 12:35:12, INFO: experiments/rfgan32_mask/models/model_438000.pt
+21-10-29 12:35:38, INFO: [epoch 48 it 438000] dloss = 1.3814058303833008, gloss = -0.688596785068512, prop_real = 0.84492, modes = 25, kl = 0.0009265942361192561
+21-10-29 12:37:04, INFO: experiments/rfgan32_mask/models/model_439000.pt
+21-10-29 12:37:29, INFO: [epoch 49 it 439000] dloss = 1.3857269287109375, gloss = -0.6959646940231323, prop_real = 0.84346, modes = 25, kl = 0.000958044141371241
+21-10-29 12:38:57, INFO: experiments/rfgan32_mask/models/model_440000.pt
+21-10-29 12:39:22, INFO: [epoch 50 it 440000] dloss = 1.3842285871505737, gloss = -0.6907804012298584, prop_real = 0.8539, modes = 25, kl = 0.0008966651248573682
+21-10-29 12:40:50, INFO: experiments/rfgan32_mask/models/model_441000.pt
+21-10-29 12:41:15, INFO: [epoch 51 it 441000] dloss = 1.3837459087371826, gloss = -0.6908792853355408, prop_real = 0.84826, modes = 25, kl = 0.0010847805812964682
+21-10-29 12:42:43, INFO: experiments/rfgan32_mask/models/model_442000.pt
+21-10-29 12:43:08, INFO: [epoch 52 it 442000] dloss = 1.3837887048721313, gloss = -0.6898801922798157, prop_real = 0.83124, modes = 25, kl = 0.00105712670811955
+21-10-29 12:44:36, INFO: experiments/rfgan32_mask/models/model_443000.pt
+21-10-29 12:45:02, INFO: [epoch 53 it 443000] dloss = 1.3822643756866455, gloss = -0.6892468333244324, prop_real = 0.8429, modes = 25, kl = 0.0008498049604896889
+21-10-29 12:46:29, INFO: experiments/rfgan32_mask/models/model_444000.pt
+21-10-29 12:46:55, INFO: [epoch 54 it 444000] dloss = 1.3841477632522583, gloss = -0.6920031309127808, prop_real = 0.84776, modes = 25, kl = 0.0008279020269736708
+21-10-29 12:48:24, INFO: experiments/rfgan32_mask/models/model_445000.pt
+21-10-29 12:48:50, INFO: [epoch 55 it 445000] dloss = 1.384153962135315, gloss = -0.6895728707313538, prop_real = 0.84874, modes = 25, kl = 0.0008648328393491803
+21-10-29 12:50:18, INFO: experiments/rfgan32_mask/models/model_446000.pt
+21-10-29 12:50:44, INFO: [epoch 56 it 446000] dloss = 1.3848719596862793, gloss = -0.6938387155532837, prop_real = 0.81078, modes = 25, kl = 0.0009115550555927901
+21-10-29 12:52:12, INFO: experiments/rfgan32_mask/models/model_447000.pt
+21-10-29 12:52:38, INFO: [epoch 57 it 447000] dloss = 1.3823692798614502, gloss = -0.6922454833984375, prop_real = 0.84018, modes = 25, kl = 0.000953710178232238
+21-10-29 12:54:06, INFO: experiments/rfgan32_mask/models/model_448000.pt
+21-10-29 12:54:32, INFO: [epoch 58 it 448000] dloss = 1.3879821300506592, gloss = -0.6924706697463989, prop_real = 0.8455, modes = 25, kl = 0.0008080446638574551
+21-10-29 12:56:01, INFO: experiments/rfgan32_mask/models/model_449000.pt
+21-10-29 12:56:27, INFO: [epoch 59 it 449000] dloss = 1.3839001655578613, gloss = -0.6934087872505188, prop_real = 0.84182, modes = 25, kl = 0.0008695505317971671
+21-10-29 12:57:57, INFO: experiments/rfgan32_mask/models/model_450000.pt
+21-10-29 12:58:22, INFO: [epoch 60 it 450000] dloss = 1.3819077014923096, gloss = -0.691646933555603, prop_real = 0.84082, modes = 25, kl = 0.0010348286409252228
+21-10-29 12:59:51, INFO: experiments/rfgan32_mask/models/model_451000.pt
+21-10-29 13:00:16, INFO: [epoch 61 it 451000] dloss = 1.382527470588684, gloss = -0.6921162009239197, prop_real = 0.8547, modes = 25, kl = 0.0008359784535769991
+21-10-29 13:01:43, INFO: experiments/rfgan32_mask/models/model_452000.pt
+21-10-29 13:02:08, INFO: [epoch 62 it 452000] dloss = 1.3856699466705322, gloss = -0.6937445402145386, prop_real = 0.85128, modes = 25, kl = 0.0008670914792473182
+21-10-29 13:03:36, INFO: experiments/rfgan32_mask/models/model_453000.pt
+21-10-29 13:04:01, INFO: [epoch 63 it 453000] dloss = 1.3872591257095337, gloss = -0.6955804228782654, prop_real = 0.84816, modes = 25, kl = 0.0008842472672981351
+21-10-29 13:05:29, INFO: experiments/rfgan32_mask/models/model_454000.pt
+21-10-29 13:05:54, INFO: [epoch 64 it 454000] dloss = 1.385046362876892, gloss = -0.6925427317619324, prop_real = 0.85016, modes = 25, kl = 0.0009060908352138742
+21-10-29 13:07:20, INFO: experiments/rfgan32_mask/models/model_455000.pt
+21-10-29 13:07:45, INFO: [epoch 65 it 455000] dloss = 1.385300636291504, gloss = -0.6955006718635559, prop_real = 0.84774, modes = 25, kl = 0.0009348280403766026
+21-10-29 13:09:11, INFO: experiments/rfgan32_mask/models/model_456000.pt
+21-10-29 13:09:37, INFO: [epoch 66 it 456000] dloss = 1.3865156173706055, gloss = -0.6907127499580383, prop_real = 0.8468, modes = 25, kl = 0.0009545991588310176
+21-10-29 13:11:03, INFO: experiments/rfgan32_mask/models/model_457000.pt
+21-10-29 13:11:29, INFO: [epoch 67 it 457000] dloss = 1.382692813873291, gloss = -0.6912537813186646, prop_real = 0.853, modes = 25, kl = 0.0009845647877681834
+21-10-29 13:12:56, INFO: experiments/rfgan32_mask/models/model_458000.pt
+21-10-29 13:13:21, INFO: [epoch 68 it 458000] dloss = 1.3871195316314697, gloss = -0.6925207376480103, prop_real = 0.8459, modes = 25, kl = 0.0009353380206781965
+21-10-29 13:14:49, INFO: experiments/rfgan32_mask/models/model_459000.pt
+21-10-29 13:15:14, INFO: [epoch 69 it 459000] dloss = 1.3842086791992188, gloss = -0.6940291523933411, prop_real = 0.8213, modes = 25, kl = 0.000931216698587299
+21-10-29 13:16:44, INFO: experiments/rfgan32_mask/models/model_460000.pt
+21-10-29 13:17:09, INFO: [epoch 70 it 460000] dloss = 1.389011025428772, gloss = -0.694925844669342, prop_real = 0.83648, modes = 25, kl = 0.0009568572940414107
+21-10-29 13:18:39, INFO: experiments/rfgan32_mask/models/model_461000.pt
+21-10-29 13:19:04, INFO: [epoch 71 it 461000] dloss = 1.3864431381225586, gloss = -0.6924828290939331, prop_real = 0.85192, modes = 25, kl = 0.0008713794194151497
+21-10-29 13:20:36, INFO: experiments/rfgan32_mask/models/model_462000.pt
+21-10-29 13:21:01, INFO: [epoch 72 it 462000] dloss = 1.3843724727630615, gloss = -0.6934833526611328, prop_real = 0.85602, modes = 25, kl = 0.0008337288191131227
+21-10-29 13:22:33, INFO: experiments/rfgan32_mask/models/model_463000.pt
+21-10-29 13:22:59, INFO: [epoch 73 it 463000] dloss = 1.3864543437957764, gloss = -0.6920583248138428, prop_real = 0.8409, modes = 25, kl = 0.0010190823400315625
+21-10-29 13:24:31, INFO: experiments/rfgan32_mask/models/model_464000.pt
+21-10-29 13:24:56, INFO: [epoch 74 it 464000] dloss = 1.3840999603271484, gloss = -0.6898457407951355, prop_real = 0.84814, modes = 25, kl = 0.000901833117090283
+21-10-29 13:26:29, INFO: experiments/rfgan32_mask/models/model_465000.pt
+21-10-29 13:26:54, INFO: [epoch 75 it 465000] dloss = 1.3848695755004883, gloss = -0.6917976140975952, prop_real = 0.84748, modes = 25, kl = 0.0008864248090542546
+21-10-29 13:28:27, INFO: experiments/rfgan32_mask/models/model_466000.pt
+21-10-29 13:28:52, INFO: [epoch 76 it 466000] dloss = 1.3845138549804688, gloss = -0.6925098896026611, prop_real = 0.85316, modes = 25, kl = 0.0008872285398470021
+21-10-29 13:30:23, INFO: experiments/rfgan32_mask/models/model_467000.pt
+21-10-29 13:30:49, INFO: [epoch 77 it 467000] dloss = 1.382700800895691, gloss = -0.6887372732162476, prop_real = 0.83098, modes = 25, kl = 0.0008889865272517299
+21-10-29 13:32:15, INFO: experiments/rfgan32_mask/models/model_468000.pt
+21-10-29 13:32:40, INFO: [epoch 78 it 468000] dloss = 1.381312608718872, gloss = -0.6888601779937744, prop_real = 0.78816, modes = 25, kl = 0.0011109637040831084
+21-10-29 13:34:06, INFO: experiments/rfgan32_mask/models/model_469000.pt
+21-10-29 13:34:32, INFO: [epoch 79 it 469000] dloss = 1.3868510723114014, gloss = -0.6936119794845581, prop_real = 0.85662, modes = 25, kl = 0.0009494733644260061
+21-10-29 13:36:00, INFO: experiments/rfgan32_mask/models/model_470000.pt
+21-10-29 13:36:26, INFO: [epoch 80 it 470000] dloss = 1.3802430629730225, gloss = -0.6909127831459045, prop_real = 0.81642, modes = 25, kl = 0.0009326257327294856
+21-10-29 13:37:54, INFO: experiments/rfgan32_mask/models/model_471000.pt
+21-10-29 13:38:19, INFO: [epoch 81 it 471000] dloss = 1.3853384256362915, gloss = -0.6960952877998352, prop_real = 0.84098, modes = 25, kl = 0.0009702014541761925
+21-10-29 13:39:48, INFO: experiments/rfgan32_mask/models/model_472000.pt
+21-10-29 13:40:14, INFO: [epoch 82 it 472000] dloss = 1.384141206741333, gloss = -0.6947455406188965, prop_real = 0.85344, modes = 25, kl = 0.0009832968068393482
+21-10-29 13:41:45, INFO: experiments/rfgan32_mask/models/model_473000.pt
+21-10-29 13:42:10, INFO: [epoch 83 it 473000] dloss = 1.3839547634124756, gloss = -0.690263032913208, prop_real = 0.85846, modes = 25, kl = 0.000827939380739149
+21-10-29 13:43:41, INFO: experiments/rfgan32_mask/models/model_474000.pt
+21-10-29 13:44:07, INFO: [epoch 84 it 474000] dloss = 1.3851078748703003, gloss = -0.6917877197265625, prop_real = 0.84406, modes = 25, kl = 0.0009096289143432433
+21-10-29 13:45:37, INFO: experiments/rfgan32_mask/models/model_475000.pt
+21-10-29 13:46:03, INFO: [epoch 85 it 475000] dloss = 1.3857152462005615, gloss = -0.6931269764900208, prop_real = 0.8559, modes = 25, kl = 0.001019163060404179
+21-10-29 13:47:34, INFO: experiments/rfgan32_mask/models/model_476000.pt
+21-10-29 13:48:00, INFO: [epoch 86 it 476000] dloss = 1.3843094110488892, gloss = -0.6903862357139587, prop_real = 0.84408, modes = 25, kl = 0.0008436208288419352
+21-10-29 13:49:31, INFO: experiments/rfgan32_mask/models/model_477000.pt
+21-10-29 13:49:57, INFO: [epoch 87 it 477000] dloss = 1.3827285766601562, gloss = -0.6932188272476196, prop_real = 0.8486, modes = 25, kl = 0.0008600159619153163
+21-10-29 13:51:24, INFO: experiments/rfgan32_mask/models/model_478000.pt
+21-10-29 13:51:50, INFO: [epoch 88 it 478000] dloss = 1.3869152069091797, gloss = -0.691393256187439, prop_real = 0.85176, modes = 25, kl = 0.0009270453996612377
+21-10-29 13:53:16, INFO: experiments/rfgan32_mask/models/model_479000.pt
+21-10-29 13:53:42, INFO: [epoch 89 it 479000] dloss = 1.3850563764572144, gloss = -0.6932694911956787, prop_real = 0.84062, modes = 25, kl = 0.0008392092303212693
+21-10-29 13:55:11, INFO: experiments/rfgan32_mask/models/model_480000.pt
+21-10-29 13:55:36, INFO: [epoch 90 it 480000] dloss = 1.3816909790039062, gloss = -0.6929905414581299, prop_real = 0.84904, modes = 25, kl = 0.0008215553541948146
+21-10-29 13:57:05, INFO: experiments/rfgan32_mask/models/model_481000.pt
+21-10-29 13:57:30, INFO: [epoch 91 it 481000] dloss = 1.3870112895965576, gloss = -0.6941702961921692, prop_real = 0.85966, modes = 25, kl = 0.0008536664559105107
+21-10-29 13:58:59, INFO: experiments/rfgan32_mask/models/model_482000.pt
+21-10-29 13:59:25, INFO: [epoch 92 it 482000] dloss = 1.3849455118179321, gloss = -0.6939765810966492, prop_real = 0.82422, modes = 25, kl = 0.0009941860412308928
+21-10-29 14:00:57, INFO: experiments/rfgan32_mask/models/model_483000.pt
+21-10-29 14:01:22, INFO: [epoch 93 it 483000] dloss = 1.3814016580581665, gloss = -0.6864861249923706, prop_real = 0.85762, modes = 25, kl = 0.0009113895462546676
+21-10-29 14:02:53, INFO: experiments/rfgan32_mask/models/model_484000.pt
+21-10-29 14:03:19, INFO: [epoch 94 it 484000] dloss = 1.3849761486053467, gloss = -0.6922845244407654, prop_real = 0.7055, modes = 25, kl = 0.001004956400387827
+21-10-29 14:04:51, INFO: experiments/rfgan32_mask/models/model_485000.pt
+21-10-29 14:05:17, INFO: [epoch 95 it 485000] dloss = 1.3851699829101562, gloss = -0.6949520707130432, prop_real = 0.8305, modes = 25, kl = 0.0008814882131989113
+21-10-29 14:06:48, INFO: experiments/rfgan32_mask/models/model_486000.pt
+21-10-29 14:07:13, INFO: [epoch 96 it 486000] dloss = 1.3863332271575928, gloss = -0.6926407217979431, prop_real = 0.85056, modes = 25, kl = 0.0009695377196158816
+21-10-29 14:08:45, INFO: experiments/rfgan32_mask/models/model_487000.pt
+21-10-29 14:09:11, INFO: [epoch 97 it 487000] dloss = 1.3837027549743652, gloss = -0.6936988830566406, prop_real = 0.83744, modes = 25, kl = 0.0008372587782170549
+21-10-29 14:10:37, INFO: experiments/rfgan32_mask/models/model_488000.pt
+21-10-29 14:11:03, INFO: [epoch 98 it 488000] dloss = 1.386293888092041, gloss = -0.6933773159980774, prop_real = 0.83416, modes = 25, kl = 0.000944699104439063
+21-10-29 14:12:30, INFO: experiments/rfgan32_mask/models/model_489000.pt
+21-10-29 14:12:56, INFO: [epoch 99 it 489000] dloss = 1.384233832359314, gloss = -0.6917166709899902, prop_real = 0.83766, modes = 25, kl = 0.0010580175802247067
+21-10-29 14:14:22, INFO: experiments/rfgan32_mask/models/model_490000.pt
+21-10-29 14:14:48, INFO: [epoch 100 it 490000] dloss = 1.384783148765564, gloss = -0.6944025754928589, prop_real = 0.86116, modes = 25, kl = 0.0008932388044156127
+21-10-29 14:16:14, INFO: experiments/rfgan32_mask/models/model_491000.pt
+21-10-29 14:16:39, INFO: [epoch 101 it 491000] dloss = 1.3846359252929688, gloss = -0.6939106583595276, prop_real = 0.85746, modes = 25, kl = 0.0008896265666202108
+21-10-29 14:18:08, INFO: experiments/rfgan32_mask/models/model_492000.pt
+21-10-29 14:18:34, INFO: [epoch 102 it 492000] dloss = 1.38564133644104, gloss = -0.69203782081604, prop_real = 0.8579, modes = 25, kl = 0.001075765043643999
+21-10-29 14:20:03, INFO: experiments/rfgan32_mask/models/model_493000.pt
+21-10-29 14:20:28, INFO: [epoch 103 it 493000] dloss = 1.3845798969268799, gloss = -0.6912662982940674, prop_real = 0.85962, modes = 25, kl = 0.0008705811087723141
+21-10-29 14:21:59, INFO: experiments/rfgan32_mask/models/model_494000.pt
+21-10-29 14:22:24, INFO: [epoch 104 it 494000] dloss = 1.383109450340271, gloss = -0.6928341388702393, prop_real = 0.86046, modes = 25, kl = 0.0009210863294858486
+21-10-29 14:23:57, INFO: experiments/rfgan32_mask/models/model_495000.pt
+21-10-29 14:24:23, INFO: [epoch 105 it 495000] dloss = 1.3857908248901367, gloss = -0.6906208395957947, prop_real = 0.8548, modes = 25, kl = 0.0008650425473177029
+21-10-29 14:25:54, INFO: experiments/rfgan32_mask/models/model_496000.pt
+21-10-29 14:26:20, INFO: [epoch 106 it 496000] dloss = 1.3856297731399536, gloss = -0.6935423016548157, prop_real = 0.85096, modes = 25, kl = 0.0008183619602700145
+21-10-29 14:27:53, INFO: experiments/rfgan32_mask/models/model_497000.pt
+21-10-29 14:28:18, INFO: [epoch 107 it 497000] dloss = 1.3849549293518066, gloss = -0.6924867033958435, prop_real = 0.85966, modes = 25, kl = 0.0008268975129003258
+21-10-29 14:29:50, INFO: experiments/rfgan32_mask/models/model_498000.pt
+21-10-29 14:30:16, INFO: [epoch 108 it 498000] dloss = 1.3836638927459717, gloss = -0.6923558115959167, prop_real = 0.85102, modes = 25, kl = 0.0009241419001888905
+21-10-29 14:31:47, INFO: experiments/rfgan32_mask/models/model_499000.pt
+21-10-29 14:32:13, INFO: [epoch 109 it 499000] dloss = 1.385813593864441, gloss = -0.6922873258590698, prop_real = 0.85424, modes = 25, kl = 0.0008727906449444786
+21-10-29 14:33:40, INFO: experiments/rfgan32_mask/models/model_500000.pt
+21-10-29 14:34:06, INFO: [epoch 110 it 500000] dloss = 1.387190341949463, gloss = -0.6941275596618652, prop_real = 0.86174, modes = 25, kl = 0.0009222711155324004
+21-10-29 14:35:34, INFO: experiments/rfgan32_mask/models/model_501000.pt
+21-10-29 14:36:00, INFO: [epoch 111 it 501000] dloss = 1.382262945175171, gloss = -0.689301609992981, prop_real = 0.85824, modes = 25, kl = 0.0009779819146871975
+21-10-29 14:37:28, INFO: experiments/rfgan32_mask/models/model_502000.pt
+21-10-29 14:37:54, INFO: [epoch 112 it 502000] dloss = 1.3792762756347656, gloss = -0.6902807354927063, prop_real = 0.78004, modes = 25, kl = 0.001009164634243758
+21-10-29 14:39:24, INFO: experiments/rfgan32_mask/models/model_503000.pt
+21-10-29 14:39:50, INFO: [epoch 113 it 503000] dloss = 1.3833431005477905, gloss = -0.6946749687194824, prop_real = 0.86264, modes = 25, kl = 0.0008989799628114943
+21-10-29 14:41:20, INFO: experiments/rfgan32_mask/models/model_504000.pt
+21-10-29 14:41:48, INFO: [epoch 114 it 504000] dloss = 1.386582851409912, gloss = -0.6931880116462708, prop_real = 0.85832, modes = 25, kl = 0.0009801476095642183
+21-10-29 14:41:48, INFO: Completed!

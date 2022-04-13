@@ -1,0 +1,12 @@
+21-11-04 21:17:29, INFO: 
+***************** GAN1_RING **************
+21-11-04 21:17:29, INFO: data_type: grid
+21-11-04 21:17:29, INFO: exp_name: gan1_ring
+21-11-04 21:17:29, INFO: nepochs: 501
+21-11-04 21:17:29, INFO: nheads: 1
+21-11-04 21:17:29, INFO: type: gan1
+21-11-04 21:17:29, INFO: weights: 
+21-11-04 21:17:29, INFO: --------------------------------
+21-11-04 21:17:29, INFO: exp_folder: experiments/gan1_ring
+21-11-04 21:17:29, INFO: images_folder: experiments/gan1_ring/images
+21-11-04 21:17:29, INFO: models_folder: experiments/gan1_ring/models
